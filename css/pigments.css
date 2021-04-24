@@ -1,0 +1,28 @@
+.consola  { 
+    background: #3b3b37; 
+    color: #f8f8f2;
+    font-weight: bold;
+}
+
+
+.gen {
+    color: #ff2b47;  /* color para lenguaje, booleans, operadores, y generales */
+}
+.re {
+    color: #2ee7ff;  /* palabras reservadas */
+}
+.st{
+    color: #a2fca2;  /* strings */
+}
+.nu {
+    color: #ffb11f;   /* numeros, parametros */
+}
+.fce {
+    color: #ce46ce;  /* funciones, condicionales, estructuras de control */
+}
+.co {
+    color: #8d8d8d;   /* comentarios */
+}
+.pr {
+    color: #fafa60;    /* prints y similares */
+}
