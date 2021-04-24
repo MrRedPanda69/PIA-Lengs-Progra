@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!--Carga de iconos desde fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"  rel="stylesheet">         <!--Fuentes de google fonts-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pigments.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Tarea #13</title>
+</head>
+
+<body class="tareas">
+    <header class="site-header">    
+        <nav>
+            <a class="nav-link" href="personales1.html">Personales</a>
+            <a class="nav-link" href="index.html">Página Principal</a>
+            <a class="nav-link" href="tareas.html">Tareas</a>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="white"><span class="eva">Tarea #13: </span>Lenguaje de Programación <span class="eva">"PHP"</span></h1>
+
+    <div class="centrado">
+        <img class="lengs legs-tareas" src="img/php.png" alt="PHP">
+    </div>
+
+    <h2>Símbolos</h2>
+    <p>
+        Operadores Aritmeticos:
+    </p>
+    <ul>
+        <li><span class="eva">Suma:</span> +</li>
+        <li><span class="eva">Resta:</span> -</li>
+        <li><span class="eva">Multiplicacion:</span> *</li>
+        <li><span class="eva">Division:</span> /</li>
+        <li><span class="eva">Módulo:</span> %</li>
+        <li><span class="eva">Exponenciacion:</span> **</li>
+        <li><span class="eva">Concatenacion:</span> .=</li>
+    </ul>
+
+    <p>
+        Operadores de comparacion:
+    </p>
+    <ul>
+        <li><span class="eva">Comprueba si son iguales:</span> ==</li>
+        <li><span class="eva">Comprueba si son distintos:</span> !=</li>
+        <li><span class="eva">Comprueba si son iguales y de exactamente el mismo tipo:</span> ===</li>
+        <li><span class="eva">Comprueba si son distintos o de distinto tipo:</span> !==</li>
+        <li><span class="eva">Diferente (igual que !=):</span> <></li>
+        <li><span class="eva">Menor qué, comprueba si un valor es menor que otro:</span> <</li>
+        <li><span class="eva">Mayór qué:</span> ></li>
+        <li><span class="eva">Menor o igual:</span> <=</li>
+        <li><span class="eva">Mayor o igual:</span> >=</li>
+        <li><span class="eva">Comparador de orden. (PHP 7):</span> <=></li>
+        <li><span class="eva">uno o el otro (PHP 7):</span> ??</li>
+    </ul>
+
+    <h2>Sintaxis</h2>
+    <p>
+        Cuando PHP analiza un archivo busca etiquetas de apertura y cierre, que normalmente son < ?php** y ?>, e indican a PHP cuando empezar y terminar de interpretar código. PHP también permite la etiqueta de apertura `< ?, pero se desaconseja. <br>
+        Otra forma de incluir código es con el <span class="eva">elemento script:</span> .
+        Si un archivo es enteramente en PHP, es preferible omitir la etiqueta de cierre al final del archivo ?>. 
+    </p>
+    <p>
+        Cualquier código fuera de las etiquetas de apertura y cierre es ignorado por el intérprete de PHP. <br>
+        Cuando se hace escape en medio de una condición, el intérprete tendrá en cuenta el código HTML sólo si ésta se cumple, de lo contrario saltará el contenido
+        Como en C o en Perl, PHP requiere que cada instrucción se termine con punto y coma ";" al final de cada sentencia. La etiqueta de cierre de un bloque de código PHP automáticamente implica el punto y coma, por lo que no es necesario incluirlo al final.
+    </p>
+
+    <h2>Esqueleto de los programas</h2>
+    <div class="consola">
+        <pre>
+            <span class="gen"> < ?php  ?></span>;  
+        </pre>
+    </div>
+
+    <h2>Aplicación para editar y ejecutar</h2>
+    <p>
+        En base a experiencia personal, yo uso Visual Studio Code para editar PHP. 
+        Al ser un lenguaje de tipado debil, solo es necesario entender la sintaxis, y con eso facilmente se puede editar y ejecutar PHP, ya que no requiere compilador. <br>
+        PHP es el segundo lenguaje en el que yo personalmente quiero especializarme, y al ya haber trabajado sus fundamentos casi a la par que con JavaScript, pude notar que ambos lenguajes poseen una sintaxis un poco parecida, y no son lenguajes de dificiles de entender.
+    </p>
+
+    <h2>Tipo de paradigma:</h2>
+    <p>
+        Pertenece al paradigma <span class="eva">imperativo, funcional, orientado a objetos, procedural y reflexivo</span>.
+    </p>
+
+    <h2>Ejemplo de un programa en :</h2>
+    <div class="consola">
+        <pre>
+            <span class="gen"> < ?php</span>;
+
+            <span class="re">$autenticado</span> = <span class="gen">true</span>;
+            <span class="re">$admin</span> = <span class="gen">false</span>;
+    
+            <span class="fce">if</span>(<span class="re">$autenticado</span> <span class="gen">&&</span> <span class="re">$admin</span>) {
+                <span class="gen">echo</span> <span class="st">'Usuario autenticado correctamente'</span>;
+            } <span class="fce">else</span> {
+            <span class="gen">echo</span> <span class="st">'Usuario no autenticado'</span>;
+        </pre>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <nav>
+        
+        <a class="nav-link" href="tarea12.html"><i class="fas fa-arrow-circle-left flecha-ant"></i>Anterior</a>
+        <a class="nav-link" href="index.html">Página Principal</a>
+        <a href="#" class="nav-link">Inicio de Página</a>
+        <a class="nav-link" href="tarea14.html">Siguiente<i class="fas fa-arrow-circle-right flecha-sig"></i></a>
+    </nav>
+</footer>
+</body>
+</html>

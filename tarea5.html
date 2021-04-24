@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!--Carga de iconos desde fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"  rel="stylesheet">         <!--Fuentes de google fonts-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pigments.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Tarea #5</title>
+</head>
+
+<body class="tareas">
+    <header class="site-header">    
+        <nav>
+            <a class="nav-link" href="personales1.html">Personales</a>
+            <a class="nav-link" href="index.html">Página Principal</a>
+            <a class="nav-link" href="tareas.html">Tareas</a>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="white"><span class="eva">Tarea #5: </span>Lenguaje de Programación <span class="eva">"Prolog"</span></h1>
+
+    <div class="centrado">
+        <img class="lengs legs-tareas" src="img/prolog.webp" alt="Prolog">
+    </div>
+    
+    <h2>Símbolos</h2>
+    <div class="cont">
+        <div>
+            <p>
+                Aritmeticos
+            </p>
+            <ul>
+                <li><span class="eva">Suma:</span> +</li>
+                <li><span class="eva">Resta:</span> -</li>
+                <li><span class="eva">Multiplicación:</span> *</li>
+                <li><span class="eva">División:</span> /</li>
+                <li><span class="eva">División Entera:</span> //</li>
+                <li><span class="eva">Residuo:</span> MOD</li>
+                <li><span class="eva">Potencia:</span> ^</li>
+            </ul>
+        </div>
+        <div>
+            <p>    
+                Relacionales: 
+            </p>
+            <ul>
+                <li><span class="eva">Igual que:</span> =</li>
+                <li><span class="eva">Mayor que:</span> ></li>
+                <li><span class="eva">Mayor o Igual que:</span> >=</li>
+                <li><span class="eva">Menor o Igual que:</span> <=</li>
+                <li><span class="eva">Desigual que:</span> <></li>
+                <li><span class="eva">Diferente que:</span> =/=</li>
+                <li><span class="eva">Evaluador de Expresión:</span> is</li>
+                <li><span class="eva">Generador de números aleatorios:</span> seed</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2>Sintaxis</h2>
+    <p>
+        Existen dos tipos de cláusulas: <span class="eva">Hechos y Reglas</span>. Una regla es del tipo: <br>
+        <span class="eva">Cabeza :- Cuerpo.</span> <br>
+        y se lee como "La cabeza es verdad si el cuerpo es verdad". El cuerpo de una regla consiste en llamadas a predicados, que son llamados los objetivos de las reglas. El predicado ,/2 (es decir, un operador de paridad 2 (que recibe 2 argumentos) y de nombre , ) denota conjunción de objetivos, y el operador ;/2 denota disyunción. Conjunciones y disyunciones pueden sólo aparecer en el cuerpo, no en la cabeza de la regla. En realidad la disyunción no es un operador básico o predefinido, sino que está meta-programado así:
+        <br>
+        <span class="eva">';' (A,_) :- A.</span>
+        <br>
+        <span class="eva">';' (_,B) :- B.</span>
+    </p>
+    <p>
+        Las cláusulas sin cuerpo (es decir, antecedente) son llamados <span class="eva">hechos</span> porque siempre son ciertos. Un ejemplo de un hecho es:
+        <br>
+        <span class="eva">gato(tom).</span>
+        <br>
+        que es equivalente a la regla:
+        <br>
+        <span class="eva">gato(tom) :- true.</span>
+        <br>
+        El predicado predefinido true/0 siempre es verdad. 
+    </p>
+
+    <h2>Esqueleto de los programas</h2>
+    <div class="consola">
+        <pre>
+            ?-
+        </pre>
+    </div>
+
+    <h2>Aplicación para editar y ejecutar</h2>
+    <p>
+        El programa se descarga de la pagina <span class="eva">"https://www.swi-prolog.org/download/stable"</span>. <br>
+        Y se ejecuta en el shell que se instala al tener listo Prolog, o en el cmd de Windows.
+        <br>
+        Al ser un lenguaje conversacional, es  importante  recordar  que  todas  las  preguntas  formuladas  a  Prolog  deben  terminar  en  un  punto.  Si  se  olvida  incluir  el  punto,  por  más  veces  que  se  presione  retorno  de  carro,  Prolog  considerará que la pregunta no está formulada en su totalidad y, por lo tanto, seguirá esperando a que se termine de formular la pregunta. 
+    </p>
+
+    <h2>Tipo de paradigma:</h2>
+    <p>
+        Pertenece al paradigma de <span class="eva">lenguajes lógicos y declarativos</span>.
+    </p>
+
+    <h2>Ejemplo de un programa en :</h2>
+    <div class="consola">
+        <pre>
+            <span class="co">% La sintaxis es fibonacci(N, F) -> Término N de la sucesión (el resultado se guarda en F).</span>
+            <span class="fce">fibonacci</span>(<span class="nu">0</span>, <span class="nu">0</span>) :-!.
+            <span class="fce">fibonacci</span>(<span class="nu">1</span>, <span class="nu">1</span>) :-!.
+            <span class="fce">fibonacci</span>(<span class="nu">N</span> ,<span class="nu">F</span>) :<span class="gen">-</span> <span class="nu">N1</span> <span class="gen">is</span> <span class="nu">N</span> <span class="gen">-</span> <span class="nu">1</span>, <span class="fce">fibonacci</span>(<span class="nu">N1</span>, <span class="nu">F1</span>),<span class="nu">N2</span> <span class="gen">is</span> <span class="nu">N</span> <span class="gen">-</span> <span class="nu">2</span>, <span class="fce">fibonacci</span>(<span class="nu">N2</span>, <span class="nu">F2</span>), <span class="nu">F</span> <span class="gen">is</span> <span class="nu">F1</span> <span class="gen">+</span> <span class="nu">F2</span>.
+
+            <span class="co">%el fibonacci se llama recursivamente dejando el resultado en F.</span>
+        </pre>
+    </div>
+    
+
+</main>
+
+<footer class="site-footer">
+    <nav>
+        <a class="nav-link" href="tarea4.html"><i class="fas fa-arrow-circle-left flecha-ant"></i>Anterior</a>
+        <a class="nav-link" href="index.html">Página Principal</a>
+        <a href="#" class="nav-link">Inicio de Página</a>
+        <a class="nav-link" href="tarea6.html">Siguiente<i class="fas fa-arrow-circle-right flecha-sig"></i></a>
+    </nav>
+</footer>
+</body>
+</html>

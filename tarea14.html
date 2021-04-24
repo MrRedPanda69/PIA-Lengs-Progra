@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!--Carga de iconos desde fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"  rel="stylesheet">         <!--Fuentes de google fonts-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pigments.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Tarea #14</title>
+</head>
+
+<body class="tareas">
+    <header class="site-header">    
+        <nav>
+            <a class="nav-link" href="personales1.html">Personales</a>
+            <a class="nav-link" href="index.html">Página Principal</a>
+            <a class="nav-link" href="tareas.html">Tareas</a>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="white"><span class="eva">Tarea #14: </span>Lenguaje de Programación <span class="eva">"SQL"</span></h1>
+
+    <div class="centrado">
+        <img class="lengs legs-tareas" src="img/sql-logo.png" alt="SQL">
+    </div>
+
+    <h2>Símbolos</h2>
+
+    <div class="cont">
+        <div>
+            <ul>
+                <li><span class="eva">Operador de acceso de campo del miembro:</span> .</li>
+                <li><span class="eva">Posición del arreglo:</span> []</li>
+                <li><span class="eva">Menos unario:</span> -</li>
+                <li><span class="eva">NOT a nivel de bits:</span> ~</li>
+                <li><span class="eva">Multiplicación:</span> *</li>
+                <li><span class="eva">División:</span> /</li>
+                <li><span class="eva">Operador de concatenación:</span> ||</li>
+                <li><span class="eva">Suma:</span> +</li>
+                <li><span class="eva">Resta:</span> -</li>
+                <li><span class="eva">Desplazamiento de bits a la izquierda:</span> <<</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><span class="eva">Desplazamiento de bits a la derecha:</span> >></li>
+                <li><span class="eva">AND a nivel de bits:</span> &</li>
+                <li><span class="eva">XOR a nivel de bits:</span> ^</li>
+                <li><span class="eva">OR a nivel de bits:</span> |</li>
+                <li><span class="eva">Igual:</span> =</li>
+                <li><span class="eva">Menor que:</span> <</li>
+                <li><span class="eva">Mayor que:</span> ></li>
+                <li><span class="eva">Menor o igual que:</span> <=</li>
+                <li><span class="eva">Mayor o igual que:</span> >=</li>
+                <li><span class="eva">No igual:</span> != o <></li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Sintaxis</h2>
+    <p>
+        En base a experiencia propia, la sintáxis de SQL es en mayúsculas en cuanto a comandos se refiere, las tablas o las databases pueden estar escritas en minúsculas, además de que forzosamente cada fin de un comando, (o almenos la mayoria), tienen que terminar con un punto y coma.
+    </p>
+
+    <h2>Esqueleto de los programas</h2>
+    <div class="consola">
+        <pre>
+            mysql>
+        </pre>
+    </div>
+
+    <h2>Aplicación para editar y ejecutar</h2>
+    <p>
+        SQL necesita de MySql para poder ejecutar comandos y estos puedes ser realizados en el cmd de windows, PowerShell o Windows Terminal, siendo ésta ultima mi terminal favorita y la cual uso en proyectos y cursos propios.
+        <br>
+        MySQL es un sistema de gestión de bases de datos relacional gratuita, que puedes emplear en equipos con distintos sistemas operativos y hasta con Excel, lo que lo hace muy versátil. Además de relativamente sencillo de usar, siendo uno de los programas de bases de datos más empleado junto a Oracle y Microsoft SQL Server.
+        <br>
+        MySQL se descarga en el siguiente link: <span class="eva">https://dev.mysql.com/downloads/installer/. </span>
+    </p>
+    <div class="centrado">
+        <img src="img/mysql.png" alt="Descarga de MySQL">
+    </div>
+    <p>
+        Te aparecerá una pantalla con la versión del Sistema Operativo que esta actualmente instalado en tu PC y dos opciones a elegir. La primera opción descarga un pequeño instalador que se conecta con el servidor de MySQL para ir descargando los demás archivos mientras se va instalando. La segunda opción descarga el instalador completo y no se necesita de una conexión a Internet para realizar la instalación.
+    </p>
+    <p>
+        Ejemplo de como se ve mysql en mi Windows Terminal:
+    </p>
+    <div class="centrado">
+        <img src="img/mysqymiterminal.png" alt="Descarga de MySQL">
+    </div>
+
+    <h2>Tipo de paradigma:</h2>
+    <p>
+        Pertenece al paradigma <span class="eva">multiparadigma y orientado a objetos</span>.
+    </p>
+
+    <h2>Ejemplo de un programa en :</h2>
+    <div class="consola">
+        <pre>
+            mysql> SHOW DATABASES;
+            +--------------------+
+            | Database           |
+            +--------------------+
+            | information_schema |
+            | appsalon           |
+            | mysql              |
+            | performance_schema |
+            | sys                |
+            +--------------------+
+            5 rows in set (0.06 sec)
+
+            mysql> USE appsalon;
+            Database changed
+            mysql> SHOW TABLES;
+            +--------------------+
+            | Tables_in_appsalon |
+            +--------------------+
+            | citas              |
+            | citasservicios     |
+            | clientes           |
+            | servicios          |
+            +--------------------+
+            4 rows in set (0.01 sec)
+
+            mysql> SELECT * FROM citas;
+            +----+------------+----------+-----------+
+            | id | fecha      | hora     | clienteId |
+            +----+------------+----------+-----------+
+            |  1 | 2021-02-19 | 15:30:00 |         1 |
+            |  2 | 2021-02-17 | 15:55:00 |         3 |
+            |  3 | 2021-03-01 | 09:00:00 |         2 |
+            +----+------------+----------+-----------+
+            3 rows in set (0.08 sec)
+
+            mysql> DESCRIBE citas;
+            +-----------+---------+------+-----+---------+----------------+
+            | Field     | Type    | Null | Key | Default | Extra          |
+            +-----------+---------+------+-----+---------+----------------+
+            | id        | int(11) | NO   | PRI | NULL    | auto_increment |
+            | fecha     | date    | NO   |     | NULL    |                |
+            | hora      | time    | NO   |     | NULL    |                |
+            | clienteId | int(11) | NO   | MUL | NULL    |                |
+            +-----------+---------+------+-----+---------+----------------+
+            4 rows in set (0.01 sec)    
+        </pre>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <nav>
+        
+        <a class="nav-link" href="tarea13.html"><i class="fas fa-arrow-circle-left flecha-ant"></i>Anterior</a>
+        <a class="nav-link" href="index.html">Página Principal</a>
+        <a href="#" class="nav-link">Inicio de Página</a>
+        <a class="nav-link" href="tarea15.html">Siguiente<i class="fas fa-arrow-circle-right flecha-sig"></i></a>
+    </nav>
+</footer>
+</body>
+</html>

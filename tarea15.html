@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!--Carga de iconos desde fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"  rel="stylesheet">         <!--Fuentes de google fonts-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pigments.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Tarea #15</title>
+</head>
+
+<body class="tareas">
+    <header class="site-header">    
+        <nav>
+            <a class="nav-link" href="personales1.html">Personales</a>
+            <a class="nav-link" href="index.html">Página Principal</a>
+            <a class="nav-link" href="tareas.html">Tareas</a>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="white"><span class="eva">Tarea #15: </span>Lenguaje de Programación <span class="eva">"Ruby"</span></h1>
+
+    <div class="centrado">
+        <img class="lengs legs-tareas" src="img/Ruby_logo.png" alt="Ruby">
+    </div>
+
+    <h2>Símbolos</h2>
+    <p>
+        
+    </p>
+
+    <h2>Sintaxis</h2>
+    <p>
+        La sintaxis de Ruby es similar a la de Perl o Python. La definición de clases y métodos está definida por palabras clave. Sin embargo, en Perl, las variables no llevan prefijos. Cuando se usa, un prefijo indica el ámbito de las variables. La mayor diferencia con C y Perl es que las palabras clave son usadas para definir bloques de código sin llaves. Los saltos de línea son significativos y son interpretados como el final de una sentencia; el punto y coma tiene el mismo uso. A diferencia de Python, la sangría no es significativa. 
+    </p>
+
+    <h2>Esqueleto de los programas</h2>
+    <div class="consola">
+        <pre>
+            <span class="pr">puts</span> <span class="st">' '</span>
+            <span class="pr">puts</span> <span class="st">"</span><span class="gen">\e</span> <span class="st">[!</span><span class="gen">\e</span> <span class="st">["</span> 
+            <span class="pr">puts</span> <span class="st">' '</span>
+        </pre>
+    </div>
+
+    <h2>Aplicación para editar y ejecutar</h2>
+    <p>
+        Sistemas Gestores de Paquetes <br>
+
+        Si no puedes compilar tu propia versión de Ruby y tampoco quieres usar una herramienta de terceros, puedes usar el sistema gestor de paquetes de tu sistema para instalar Ruby. <br>
+        Algunos miembros de la comunidad Ruby sienten que debes evitar gestores de paquetes para instalar Ruby y deberías en su lugar usar herramientas dedicadas. <br>
+        Es posible que algunos gestores de paquetes importantes insten versiones anteriores de Ruby en lugar de la ultima versión. Para usar la última versión de Ruby, revisa que el nombre del paquete coincida con el número de versión. O usa un instalador dedicado. <br>
+    </p>    
+    <p>
+        <span class="eva">apt</span> (<span class="eva">Debian o Ubuntu</span>) <br>
+
+        Debian GNU/Linux y Ubuntu usan el gestor de paquetes apt. Se usa de la siguiente manera:
+        </p> 
+        <div class="consola">
+            <pre>
+                <span class="st">$ sudo</span> apt-get <span class="st">install</span> ruby-full
+            </pre>
+        </div>
+    </p>
+    
+    <p>
+    <span class="eva">yum</span> (<span class="eva">CentOS, Fedora, or RHEL</span>) <br>
+    CentOS, Fedora, y RHEL usan el gestor de paquetes yum. Se usa de la siguiente manera:
+    </p>
+
+    <div class="consola">
+        <pre>
+            <span class="st">$ sudo</span> yum <span class="st">install</span> ruby
+        </pre>
+    </div>
+
+    <h2>Tipo de paradigma:</h2>
+    <p>
+        Pertenece al paradigma <span class="eva"> orientado a objetos y reflexivo</span>.
+    </p>
+
+    <h2>Ejemplo de un programa en :</h2>
+    <div class="consola">
+        <pre>
+            <span class="co">#!/usr/bin/env ruby</span>
+
+            <span class="pr">puts</span> <span class="st">' '</span>
+            <span class="pr">puts</span> <span class="st">"</span><span class="gen">\e</span> <span class="st">[31m By Juan FGR !</span><span class="gen">\e</span> <span class="st">[0m"</span> <span class="co">#Color rojo, sobre esto hay mucha informacion en internet</span>
+            <span class="pr">puts</span> <span class="st">' '</span>
+
+            <span class="co">#Comenzando en el concatenado de cadenas de caracteres</span>
+            <span class="fce">def</span> <span class="pr">metod</span>()
+            word <span class="gen">=</span> <span class="st">"Ingeniero"</span>
+            word1 <span class="gen">=</span> <span class="st">"Informatico"</span>
+            word2 <span class="gen">=</span> word+word1
+            
+            <span class="fce">end</span>
+
+            <span class="co">#Interesante opcion del Ruby que permite valores negativos para los vectores</span>
+            <span class="co">#Mientras el 0 corresponde a la primera posicion del vector</span>
+            <span class="co">#el -1 corresponde a la ultima posicion,-2 a la penultima y asi sucesivamente</span>
+            <span class="fce">def</span> <span class="pr">metod1</span>()
+            word3 <span class="gen">=</span> <span class="st">"MURCIELAGO"</span>
+            word4 <span class="gen">=</span> word3[<span class="gen">-</span><span class="nu">2</span>]
+            <span class="fce">end</span>
+
+            <span class="pr">print</span> <span class="st">" Cadenas Concatenadas: "</span>,metod(),<span class="st">"</span><span class="gen">\n</span><span class="st">"</span> 
+            <span class="pr">print</span> <span class="st">" Cogiendo una letra de MURCIELAGO: "</span>,metod1(),<span class="st">"</span><span class="gen">\n</span><span class="st">"</span>
+        </pre>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <nav>
+        
+        <a class="nav-link" href="tarea14.html"><i class="fas fa-arrow-circle-left flecha-ant"></i>Anterior</a>
+        <a class="nav-link" href="index.html">Página Principal</a>
+        <a href="#" class="nav-link">Inicio de Página</a>
+        <a class="nav-link" href="tarea16.html">Siguiente<i class="fas fa-arrow-circle-right flecha-sig"></i></a>
+    </nav>
+</footer>
+</body>
+</html>

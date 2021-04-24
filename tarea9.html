@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!--Carga de iconos desde fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"  rel="stylesheet">         <!--Fuentes de google fonts-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pigments.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Tarea #9</title>
+</head>
+
+<body class="tareas">
+    <header class="site-header">    
+        <nav>
+            <a class="nav-link" href="personales1.html">Personales</a>
+            <a class="nav-link" href="index.html">Página Principal</a>
+            <a class="nav-link" href="tareas.html">Tareas</a>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="white"><span class="eva">Tarea #9: </span>Lenguaje de Programación <span class="eva">"R"</span></h1>
+
+    <div class="centrado">
+        <img class="lengs legs-tareas" src="img/r.jpg" alt="R">
+    </div>
+
+    <h2>Símbolos</h2>
+    <div class="cont">
+        <div>
+            <p>
+                Funciones Usuales:
+            </p>
+            <ul>
+                <li><span class="eva">Suma de los elementos:</span> sum( )</li>
+                <li><span class="eva">Raíz cuadrada:</span> sqrt( )</li>
+                <li><span class="eva">Valor absoluto:</span> abs( )</li>
+                <li><span class="eva">Funciones trigonométricas:</span> sin( ), cos( ), …</li>
+                <li><span class="eva">Logaritmo y exponencial:</span> log( ), exp( )</li>
+                <li><span class="eva">Redondeo de valores numéricos:</span> round( )</li>
+            </ul>
+        </div>
+
+        <div>
+            <p>
+                Operadores de Relación:
+            </p>
+            <ul>
+                <li><span class="eva">Menor que</span> <</li>
+                <li><span class="eva">Mayor que</span> ></li>
+                <li><span class="eva">Menor o igual que</span> ≤</li>
+                <li><span class="eva">Mayor o igual que</span> ≥</li>
+                <li><span class="eva">Igual</span> =</li>
+                <li><span class="eva">Diferente</span> !=</li>
+            </ul>
+        </div>
+
+        <div>
+            <p>
+                Operadores Lógicos:
+            </p>
+            <ul>
+                <li><span class="eva">Negacion:</span> !x</li>
+                <li><span class="eva">Conjuncion:</span> x&y</li>
+                <li><span class="eva">Igual:</span> x&&y</li>
+                <li><span class="eva">Disyunción:</span> x|y</li>
+                <li><span class="eva">Igual:</span> x||y</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Sintaxis</h2>
+    <p>
+        El código R está compuesto por una serie de expresiones. Ejemplo de expresiones en R incluyen, expresiones aritméticas, instrucciones de control (condicionales e iterativas) e instrucciones de asignación. A continuación se muestran ejemplos de expresiones:
+    </p>
+    <div class="consola">
+        <pre>
+            <span class="co"># Instrucción asignación</span>
+            x <- <span class="nu">1</span>
+        </pre>
+    </div>
+    <p>
+        Podemos crear nuevos objetos con el operador de asignación <-. Todas las instrucciones de asignación dónde creamos objetos, tienen la misma forma:
+    </p>
+    <div class="consola">
+        <pre>
+            nombre_objeto <- valor
+        </pre>
+    </div>
+    <p>
+        R proporciona diferentes construcciones para agrupar expresiones:
+    </p>
+    <div class="consola">
+        <pre>
+            - punto y coma
+            - paréntesis
+            - llaves
+        </pre>
+    </div>
+    <p>
+        Podemos escribir una serie de expresiones en líneas separadas:
+    </p>
+    <div class="consola">
+        <pre>
+            x <span class="gen"><-</span> <span class="nu">1</span> 
+            y <span class="gen"><-</span> <span class="nu">2</span> 
+            z <span class="gen"><-</span> <span class="nu">3</span> 
+        </pre>
+    </div>
+    <p>
+        Alternativamente, podemos colocarlas en la misma línea, separadas por punto y coma:
+    </p>
+    <div class="consola">
+        <pre>
+            x <span class="gen"><-</span> <span class="nu">1</span> ; y <span class="gen"><-</span> <span class="nu">2</span> ; z <span class="gen"><-</span> <span class="nu">3</span> 
+        </pre>
+    </div>
+    <p>
+        La notación con paréntesis devuelve el resultado de evaluar la expresión dentro del paréntesis:
+    </p>
+    <div class="consola">
+        <pre>
+            (x <span class="gen"><-</span> <span class="nu">1</span>)
+            <span class="co"> 
+                ## [1] 1
+            </span>
+
+            <span class="co"> # es equivalente </span>
+            x <span class="gen"><-</span> <span class="nu">1</span>
+            x
+            <span class="co"> 
+                ## [1] 1
+            </span>
+
+        </pre>
+    </div>
+
+    <h2>Esqueleto de los programas</h2>
+    <div class="consola">
+        <pre>
+            
+        </pre>
+    </div>
+
+    <h2>Aplicación para editar y ejecutar</h2>
+    <p>
+        El lenguaje R necesita el editor Rstudio para poder ser editado y ejecutado.
+        <span class="eva">Instalar R:</span> Navegar a <span class="eva">http://cran.r-project.org/bin/windows/base/</span> y descargar el paquete que corresponda a nuestro sistema.
+        <br>
+        <span class="eva">Instalar Rstudio:</span> Navegar a <span class="eva">http://www.rstudio.com/products/rstudio/download/</span> y descargar el paquete que corresponda a nuestro sistema.
+    </p>
+
+    <h2>Tipo de paradigma:</h2>
+    <p>
+        Pertenece al paradigma <span class="eva">funcional, vectorial, imperativo, procedural y orientado a objetos</span>.
+    </p>
+
+    <h2>Ejemplo de un programa en R:</h2>
+    <div class="consola">
+        <pre>
+            > <span class="fce">chooseCRANmirror</span>(<span class="nu">graphics</span>=<span class="gen">FALSE</span>)
+                <span class="fce">HTTPS CRAN mirror </span>
+
+                1: 0-Cloud [<span class="re">https</span>]                 2: Algeria [<span class="re">https</span>]                 3: Australia (Melbourne) [<span class="re">https</span>]
+                4: Australia (Perth) [<span class="re">https</span>]       5: Austria [<span class="re">https</span>]                 6: Belgium (Ghent) [<span class="re">https</span>]      
+                7: Brazil (SP 1) [<span class="re">https</span>]           8: Bulgaria [<span class="re">https</span>]                9: Canada (MB) [<span class="re">https</span>]          
+                10: Chile [<span class="re">https</span>]                  11: China (Beijing 4) [<span class="re">https</span>]      12: Colombia (Cali) [<span class="re">https</span>]      
+                13: Czech Republic [<span class="re">https</span>]         14: Denmark [<span class="re">https</span>]                15: France (Lyon 1) [<span class="re">https</span>]      
+                16: France (Lyon 2) [<span class="re">https</span>]        17: France (Marseille) [<span class="re">https</span>]     18: France (Paris 2) [<span class="re">https</span>]     
+                19: Germany (Falkenstein) [<span class="re">https</span>]  20: Germany (Münster) [<span class="re">https</span>]      21: Iceland [<span class="re">https</span>]              
+                22: Ireland [<span class="re">https</span>]                23: Italy (Padua) [<span class="re">https</span>]          24: Japan (Tokyo) [<span class="re">https</span>]        
+                25: Malaysia [<span class="re">https</span>]               26: Mexico (Mexico City) [<span class="re">https</span>]   27: New Zealand [<span class="re">https</span>]          
+                28: Norway [<span class="re">https</span>]                 29: Philippines [<span class="re">https</span>]            30: Russia (Moscow) [<span class="re">https</span>]      
+                31: Serbia [<span class="re">https</span>]                 32: Spain (A Coruña) [<span class="re">https</span>]       33: Spain (Madrid) [<span class="re">https</span>]       
+                34: Switzerland [<span class="re">https</span>]            35: Taiwan (Chungli) [<span class="re">https</span>]       36: Turkey (Denizli) [<span class="re">https</span>]     
+                37: UK (Bristol) [<span class="re">https</span>]           38: UK (Cambridge) [<span class="re">https</span>]         39: UK (London 1) [<span class="re">https</span>]        
+                40: USA (CA 1) [<span class="re">https</span>]             41: USA (IA) [<span class="re">https</span>]               42: USA (KS) [<span class="re">https</span>]             
+                43: USA (MI 1) [<span class="re">https</span>]             44: USA (TN) [<span class="re">https</span>]               45: USA (TX) [<span class="re">https</span>]             
+                46: USA (WA) [<span class="re">https</span>]               47: (HTTP mirrors)                    
+
+                <span class="gen">Selection</span>:
+        </pre>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <nav>
+        
+        <a class="nav-link" href="tarea8.html"><i class="fas fa-arrow-circle-left flecha-ant"></i>Anterior</a>
+        <a class="nav-link" href="index.html">Página Principal</a>
+        <a href="#" class="nav-link">Inicio de Página</a>
+        <a class="nav-link" href="tarea10.html">Siguiente<i class="fas fa-arrow-circle-right flecha-sig"></i></a>
+    </nav>
+</footer>
+</body>
+</html>

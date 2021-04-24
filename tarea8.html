@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!--Carga de iconos desde fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"  rel="stylesheet">         <!--Fuentes de google fonts-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pigments.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Tarea #8</title>
+</head>
+
+<body class="tareas">
+    <header class="site-header">    
+        <nav>
+            <a class="nav-link" href="personales1.html">Personales</a>
+            <a class="nav-link" href="index.html">Página Principal</a>
+            <a class="nav-link" href="tareas.html">Tareas</a>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="white"><span class="eva">Tarea #8: </span>Lenguaje de Programación <span class="eva">"Haskell"</span></h1>
+
+    <div class="centrado">
+        <img class="lengs legs-tareas" src="img/haskell-logo-png-transparent.png" alt="Haskell">
+    </div>
+
+    <h2>Símbolos</h2>
+    <div>
+        <p>
+            Simbologia General:
+        </p>
+        <ul>
+            <li><span class="eva">Tiene el tipo:</span> ::</li>
+            <li><span class="eva">Reduce a:</span> =></li>
+            <li><span class="eva">Funcion:</span> ==</li>
+        </ul>
+    </div>
+
+    <div>
+        <p>
+            Funciones Predeterminadas:
+        </p>
+        <ul>
+            <li><span class="eva">Numéricas:</span> abs, negate, div, mod, round, floor, ceiling, sqrt, cos, sin, tan, acos, asin, atan</li>
+            <li><span class="eva">Ordinales:</span> succ, pred, fromEnum, toEnum</li>
+            <li><span class="eva">Booleanas:</span> not </li>
+            <li><span class="eva">Usando caracteres:</span> chr, ord, isDigit, isLower, isUpper, toLower, toUpper</li>
+            <li><span class="eva">Sobre tuplas:</span> fst, snd</li>
+            <li><span class="eva">Usando strings:</span> words, unwords, unlines, lines</li>
+            <li><span class="eva">Usando listas:</span> concat, reverse, take, drop, splitAt, head, tail, last, init, length, zip, unzip, map, filter, zipWith, takeWhile, dropWhile, span, foldl, foldl1,foldr,foldr1, scanl, scanl1, scanr, scanr1</li>
+            <li><span class="eva"> Sobre funciones:</span> flip</li>
+        </ul>
+    </div>
+    
+    
+
+    <h2>Sintaxis</h2>
+    <p>
+        A diferencia de los operadores, las funciones se utilizan en notación prefija, es decir, el nombre de la función se coloca antes de sus parámetros. Los nombres de las funciones sólo pueden contener caracteres normales, es decir, letras, dígitos, comillas y subrayados. El primer carácter de un identificador de función no puede ser una letra mayúscula ni un dígito.
+        <br>
+        También es posible aplicar parcialmente una función, sin suministrarle todos sus parámetros. Esto genera una nueva función, que puede utilizarse como otra función cualquiera. Esta facilidad es especialmente útil en presencia de orden superior. 
+    </p>
+
+    <h2>Esqueleto de los programas</h2>
+    <div class="consola">
+        <pre>
+            Prelude>
+        </pre>
+    </div>
+
+    <h2>Aplicación para editar y ejecutar</h2>
+    <p>
+        Como con muchos otros lenguajes de programación, Haskell ofrece muchas posibilidades para trabajar en tu sistema. Si quieres aprender Haskell o programar de forma cómoda, la solución más habitual es GHCi, un entorno de desarrollo interactivo y listo para usar, que está disponible en combinación con el Glasgow Haskell Compiler. Además del compilador, se necesitan bibliotecas Haskell, que a su vez requieren software de construcción como Cabal o Stack.
+    </p>
+
+    <h2>Tipo de paradigma:</h2>
+    <p>
+        Pertenece al paradigma <span class="eva">funcional, no estricto, modular y fuertemente tipado</span>.
+    </p>
+
+    <h2>Ejemplo de un programa en :</h2>
+    <div class="consola">
+        <pre>
+            <span class="re">add</span> <span class="gen">::</span> <span class="fce">Integer</span> <span class="gen">-></span> <span class="fce">Integer</span> <span class="gen">-></span> <span class="fce">Integer</span>   <span class="co">--function declaration</span>
+            add x y <span class="gen">=</span>  <span class="nu">x</span> <span class="gen">+</span> <span class="nu">y</span>                       <span class="co">--function definition</span>
+            main <span class="gen">=</span>  <span class="fce">do</span> 
+                <span class="pr">putStrLn</span> <span class="st">"La suma de ambos números es la siguiente:"</span>
+                <span class="pr">print</span>(<span class="re">add</span> <span class="nu">3 5</span>)    <span class="co">--calling a function</span>
+        </pre> 
+    </div>
+</main>
+
+<footer class="site-footer">
+    <nav>
+        
+        <a class="nav-link" href="tarea7.html"><i class="fas fa-arrow-circle-left flecha-ant"></i>Anterior</a>
+        <a class="nav-link" href="index.html">Página Principal</a>
+        <a href="#" class="nav-link">Inicio de Página</a>
+        <a class="nav-link" href="tarea9.html">Siguiente<i class="fas fa-arrow-circle-right flecha-sig"></i></a>
+    </nav>
+</footer>
+</body>
+</html>

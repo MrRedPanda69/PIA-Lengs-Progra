@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!--Carga de iconos desde fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"  rel="stylesheet">         <!--Fuentes de google fonts-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pigments.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Tarea #6</title>
+</head>
+
+<body class="tareas">
+    <header class="site-header">    
+        <nav>
+            <a class="nav-link" href="personales1.html">Personales</a>
+            <a class="nav-link" href="index.html">Página Principal</a>
+            <a class="nav-link" href="tareas.html">Tareas</a>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="white"><span class="eva">Tarea #6: </span>Lenguaje de Programación <span class="eva">"Python"</span></h1>
+
+    <div class="centrado">
+        <img class="lengs legs-tareas" src="img/python.png" alt="Python">
+    </div>
+
+    <h2>Símbolos</h2>
+    <div class="cont">
+        <div>
+            <p>
+                Aritméticos:
+            </p>
+            <ul>
+                <li><span class="eva">Suma:</span> +</li>
+                <li><span class="eva">Resta:</span> -</li>
+                <li><span class="eva">Multiplicación:</span> *</li>
+                <li><span class="eva">División:</span> /</li>
+                <li><span class="eva">Módulo:</span> %</li>
+                <li><span class="eva">Exponente:</span> **</li>
+                <li><span class="eva">División de enteros:</span> //</li>
+            </ul>
+        </div>
+        
+        <div>
+            <p>
+                Relacionales:
+            </p>
+            <ul>
+                <li><span class="eva">Exactamente igual que:</span> ==</li>
+                <li><span class="eva">Diferente de:</span> !=</li>
+                <li><span class="eva">Mayor que:</span> ></li>
+                <li><span class="eva">Menor que:</span> <</li>
+                <li><span class="eva">Mayor o igual que:</span> >=</li>
+                <li><span class="eva">Menor o igual que:</span> <=</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <h2>Sintaxis</h2>
+    <p>
+        Al iniciarnos en Python podemos trabajar de dos formas, mediante el modo interactivo, ejecutando la orden en tiempo real; y en modo script escribiendo el código en Python y ejecutando después con el intérprete. <br>
+        La sintaxis en Python nos permite usar el modo interactivo activando el intérprete Python y escribiendo python en la línea de comandos. Una vez puesto en marcha, ya podemos ejecutar órdenes sin ningún problema. <br>
+        Parte esencial de la sintaxis en Python son los identificadores, que sirven para identificar una variable, función, clase, módulo u objeto. Habitualmente los identificadores empiezan con letras, en mayúscula o minúscula, o con un guión bajo seguido de un cero y varias letras o números. 
+    </p>
+    <p>
+        Analizando en profundidad la sintaxis en Python, recordamos y recalcamos que los nombres de clase empiezan con una letra mayúscula mientras que el resto de identificadores empiezan con minúscula. <br>
+        En caso de que el identificador empiece con un guión bajo o con dos guiones bajos, significa que es privado. Si el identificador finaliza con dos guiones bajos, el identificador es un nombre especial definido por lenguaje.
+    </p>
+
+    <h2>Esqueleto de los programas</h2>
+    <div class="consola">
+        <pre>
+            
+        </pre>
+    </div>
+
+    <h2>Aplicación para editar y ejecutar</h2>
+    <p>
+        Python puede ser editado en cualquier IDE, pero Pydev es el IDE de Python por excelencia, simplemente porque es gratuito y trae consigo multitud de funciones muy interesantes para la programación eficiente de Python. Es un plugin open source que se ejecuta en Eclipse.
+    </p>
+    <p>
+        Pasos para compilar Python:
+    </p>
+    <ul>
+        <li><span class="eva">Paso 1:</span> <br> Abre un nuevo archivo de texto en el Bloc de notas o tu editor favorito y guárdalo como <span class="eva">mysetupfile.py</span>. Este archivo de texto le dirá al programa <span class="eva">py2exe</span> que los programas Python se conviertan en un exe.</li>
+        <li><span class="eva">Paso 2:</span> <br> Agrega las líneas siguientes en el archivo de texto: from distutils.core import setup import <span class="eva">py2exesetup(console=['mycode.py'])</span> donde <span class="eva">"mycode.py"</span> es el nombre de tu programa en Python que deseas compilar.</li>
+        <li><span class="eva">Paso 3:</span> <br> Ejecuta el archivo <span class="eva">mysetupfile.py</span> a través del programa <span class="eva">py2exe: c:\Python> Python mysetupfile.py py2exe</span></li>
+        <li><span class="eva">Paso 4:</span> <br> Espera a que el compilador <span class="eva">py2exe</span> termine de producir su salida. Si todo va bien, el compilador puede informarte acerca de las DLL que el programa de Python es dependiente una vez que termine de compilar.</li>
+        <li><span class="eva">Paso 5:</span> <br> Espera hasta que la compilación finalice. Una vez que esto ocurra, se creará un directorio llamado "dist". Introduce el directorio por tipo:
+        <br>
+        <span class="eva">c:\Python> cd dist</span></li>
+        <li><span class="eva">Paso 6:</span> <br> Busca en el directorio para ver un exe de tu proyecto. Prueba la compilación ejecutando el programa:
+        <br>
+        <span class="eva">c:\Python> mycode.exe</span></li>
+    </ul>
+
+    <h2>Tipo de paradigma:</h2>
+    <p>
+        Pertenece al paradigma <span class="eva">orientado a objetos, imperativo, funcional y reflexivo</span>.
+    </p>
+
+    <h2>Ejemplo de un programa en Python:</h2>
+    <div class="consola">
+        <pre>
+            lenguaje <span class="gen">=</span> <span class="st">"Python"</span>
+            <span class="gen">>>></span> <span class="fce">if</span> lenguaje <span class="gen">==</span> <span class="st">"C"</span>: <span class="co"># lenguaje no es "C", por lo que este bloque se obviará y evaluará la siguiente condición</span>
+            <span class="gen">...</span>     <span class="pr">print</span> <span class="st">"Lenguaje de programación: C"</span>
+            <span class="gen">...</span> <span class="fce">elif</span> lenguaje <span class="gen">==</span> <span class="st">"Python"</span>: <span class="co"># Se pueden añadir tantos bloques "elif" como se quiera</span>
+            <span class="gen">...</span>     <span class="pr">print</span> <span class="st">"Lenguaje de programación: Python"</span>
+            <span class="gen">...</span> <span class="fce">else</span>: <span class="co"># En caso de que ninguna de las anteriores condiciones fuera cierta, se ejecutaría este bloque</span>
+            <span class="gen">...</span>     <span class="pr">print</span> <span class="st">"Lenguaje de programación: indefinido"</span>
+        </pre>
+    </div>
+    
+</main>
+
+<footer class="site-footer">
+    <nav>
+        
+        <a class="nav-link" href="tarea5.html"><i class="fas fa-arrow-circle-left flecha-ant"></i>Anterior</a>
+        <a class="nav-link" href="index.html">Página Principal</a>
+        <a href="#" class="nav-link">Inicio de Página</a>
+        <a class="nav-link" href="tarea7.html">Siguiente<i class="fas fa-arrow-circle-right flecha-sig"></i></a>
+    </nav>
+</footer>
+</body>
+</html>

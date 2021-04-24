@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!--Carga de iconos desde fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"  rel="stylesheet">         <!--Fuentes de google fonts-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pigments.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">  
+    <title>Tarea #7</title>
+</head>
+
+<body class="tareas">
+    <header class="site-header">    
+        <nav>
+            <a class="nav-link" href="personales1.html">Personales</a>
+            <a class="nav-link" href="index.html">Página Principal</a>
+            <a class="nav-link" href="tareas.html">Tareas</a>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="white"><span class="eva">Tarea #7: </span>Lenguaje de Programación <span class="eva">"Scheme"</span></h1>
+
+    <div class="centrado">
+        <img class="lengs legs-tareas" src="img/200px-Lambda_lc.svg.png" alt="Sheme">
+    </div>
+
+    <h2>Símbolos</h2>
+    <div class="cont">
+        <div>
+            <ul>
+                <li><span class="eva">Comentarios:</span> ;</li>
+                <li><span class="eva">Booleans Verdaderos</span> #t</li>
+                <li><span class="eva">Booleans Falsos</span> #f</li>
+                <li><span class="eva">Igualdad para saber si dos objetos son el mismo:</span> eq?</li>
+                <li><span class="eva">Igualdad que compara el contenido de estructuras de datos:</span> equal?</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li><span class="eva">Comparacion de strings:</span> string=?</li>
+                <li><span class="eva">Comparacion de caracteres:</span> char=?</li>
+                <li><span class="eva">Comparacion de numeros:</span> =</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Sintaxis</h2>
+    <p>
+        Scheme posee una sintaxis reducida comparada a otros lenguajes. Utiliza la notación prefija. Por ejemplo, si se desea realizar la suma 1+1, se debe programar la siguiente instrucción. <br>
+        Los paréntesis son obligatorios, ya que separan las instrucciones que serán evaluadas por el intérprete. Para realizar comentarios dentro del código, se utiliza el ";", así se marca que toda la línea será de comentario. <br>
+        Las variables son dinámicamente tipadas. Dicho de otra forma, no se debe especificar lo que se va a guardar dentro de la misma. Las variables globales se nombran con la instrucción (define nombre valor). <br>
+    </p>
+
+    <h2>Esqueleto de los programas</h2>
+    <div class="consola">
+        <pre>
+            
+        </pre>
+    </div>
+
+    <h2>Aplicación para editar y ejecutar</h2>
+    <p>
+        Racket se diseñó en 1995 basándose en Scheme y ampliándolo con nuevas funcionalidades, como la posibilidad de extenderlo con librerías. El lenguaje contiene librerías muy útiles (librerías gráficas, de conexión a servidores HTTP, de conexión a bases de datos, etc.) con las que se moderniza el lenguaje original y se convierte en un lenguaje práctico para desarrollar todo tipo de aplicaciones, desde videojuegos a servidores web. Sin embargo, nosotros sólo vamos a usar Racket para aprender la parte que corresponde al núcleo original de Scheme. 
+        <br>
+        
+    </p>
+
+    <h2>Tipo de paradigma:</h2>
+    <p>
+        Pertenece al paradigma <span class="eva">Multiparadigma</span>.
+    </p>
+
+    <h2>Ejemplo de un programa en :</h2>
+    <div class="consola">
+        <pre>
+            (<span class="gen">define</span> (<span class="re">factorial</span> <span class="nu">n</span>)
+                (<span class="fce">cond</span> ((= <span class="nu">n</span> <span class="nu">0</span>) <span class="nu">1</span>)
+                    (<span class="fce">else</span> (* <span class="nu">n</span> (<span class="re">factorial</span> (- <span class="nu">n</span> <span class="nu">1</span>))))))
+
+                (<span class="re">factorial</span> <span class="nu">5</span>)
+            ;; <span class="gen">=></span> <span class="nu">120</span>
+        </pre>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <nav>
+        
+        <a class="nav-link" href="tarea6.html"><i class="fas fa-arrow-circle-left flecha-ant"></i>Anterior</a>
+        <a class="nav-link" href="index.html">Página Principal</a>
+        <a href="#" class="nav-link">Inicio de Página</a>
+        <a class="nav-link" href="tarea8.html">Siguiente<i class="fas fa-arrow-circle-right flecha-sig"></i></a>
+    </nav>
+</footer>
+</body>
+</html>
