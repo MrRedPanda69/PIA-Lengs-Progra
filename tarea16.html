@@ -29,7 +29,35 @@
 
     <div class="consola">
         <pre>
-            
+            <span class="fce">import javax.swing.JOptionPane</span>;
+
+            <span class="fce">public class</span> <span class="pr">tarea16</span> {
+                <span class="fce">public static void</span> <span class="pr">main</span>(<span class="fce">String</span>[] <span class="re">args</span>) {
+                    <span class="fce">String</span> <span class="re">entrada</span>;
+
+                    <span class="fce">String</span>[] <span class="re">options</span> <span class="gen">=</span> {<span class="st">"Grados Celsius a Farenheit"</span>, <span class="st">"Grados Farenheit a Celsius"</span>};
+                    <span class="fce">int</span> <span class="re">v</span> <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="re">showOptionDialog</span>(<span class="gen">null</span>, 
+                    <span class="st">"Selecciona tu tipo de conversion"</span>,
+                    <span class="st">"Programa de conversiones"</span>,
+                    <span class="re">JOptionPane</span>.<span class="re">YES_NO_CANCEL_OPTION</span>,
+                    <span class="re">JOptionPane</span>. <span class="re">QUESTION_MESSAGE</span>,
+                    <span class="gen">null</span>,
+                    options,
+                    options[<span class="nu">0</span>]);
+                    <span class="fce">float</span> <span class="re">n</span>;
+                    <span class="fce">if</span>(v <span class="gen">==</span> <span class="nu">0</span>) {
+                        entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la temperatura en Celsius"</span>);
+                        n <span class="gen">=</span> <span class="re">Float</span>.<span class="pr">parseFloat</span>(entrada);
+                        n <span class="gen">=</span> ( (n <span class="gen">*</span> <span class="nu">9</span>) <span class="gen">/</span> <span class="nu">5</span> ) <span class="gen">+</span> <span class="nu">32</span>;
+                        <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"La temperatura en Farenheit es: "</span> <span class="gen">+</span> n); 
+                    } <span class="fce">else</span> {
+                        entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la temperatura en Farenheit"</span>);
+                        n <span class="gen">=</span> <span class="re">Float</span>.<span class="pr">parseFloat</span>(entrada);
+                        n <span class="gen">=</span> ( (n <span class="gen">-</span> <span class="nu">32</span>) <span class="gen">*</span> <span class="nu">5</span> ) <span class="gen">/</span> (<span class="nu">9</span>);
+                        <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"La temperatura en Celsius es: "</span> <span class="gen">+</span> n); 
+                    }
+                }   <span class="co">// fin main</span>
+            }  <span class="co">// fin public class</span> 
         </pre>
     </div>
 </main>
