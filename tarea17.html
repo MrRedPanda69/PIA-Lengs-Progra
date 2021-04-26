@@ -50,8 +50,8 @@
                 public class tarea17 {
                     public static void main(String[] args) {
                         String entrada;
-
-                        String[] options = {"Dolar", "Euro", "Yen", "Dolar HK"};
+                
+                        String[] options = {"X", "Dolar", "Euro", "Yen", "Dolar HK"};
                         int v = JOptionPane.showOptionDialog(null, 
                         "Selecciona tu tipo de moneda a convertir",
                         "Convertidor de MXN pesos a distintas monedas internacionales",
@@ -59,34 +59,42 @@
                         JOptionPane.QUESTION_MESSAGE,
                         null,
                         options,
-                        options[0]);
+                        options[1]);
                         double n;
-                        if(v == 0) {
-                            entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a dolares");
-                            n = Double.parseDouble(entrada);
-                            n = (n) / (19.83);  
-                            JOptionPane.showMessageDialog(null, "Tienes: " + n + " dolar(es)");
-
-                        } /* if dolar */ else if(v == 1) {
-                            entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a euros");
-                            n = Double.parseDouble(entrada);
-                            n = (n) / (23.85);  
-                            JOptionPane.showMessageDialog(null, "Tienes: " + n + " euro(s)");
-
-                        } /* else if euro*/ else if(v == 2) {
-                            entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a yenes");
-                            n = Double.parseDouble(entrada);
-                            n = (n) / (0.18);  
-                            JOptionPane.showMessageDialog(null, "Tienes: " + n + " yen(es)");
-
-                        } /* else if yen */ else if(v == 3) {
-                            entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a dolares de Hong Kong");
-                            n = Double.parseDouble(entrada);
-                            n = (n) / (2.55);  
-                            JOptionPane.showMessageDialog(null, "Tienes: " + n + " dolar(es) de Hong Kong");
-                        } /* else if dls HK */
-                    }
-                }
+                        switch(v) {
+                            case 1:
+                                entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a dolares");
+                                n = Double.parseDouble(entrada);
+                                n = (n) / (19.83);  
+                                JOptionPane.showMessageDialog(null, "Tienes: " + n + " dolar(es)");
+                                break;  // fin case 1
+                
+                            case 2:
+                                entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a euros");
+                                n = Double.parseDouble(entrada);
+                                n = (n) / (23.85);  
+                                JOptionPane.showMessageDialog(null, "Tienes: " + n + " euro(s)");
+                                break;  // fin case 2
+                            
+                            case 3:  
+                                entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a yenes");
+                                n = Double.parseDouble(entrada);
+                                n = (n) / (0.18);  
+                                JOptionPane.showMessageDialog(null, "Tienes: " + n + " yen(es)");
+                                break;  // fin case 3
+                
+                            case 4:
+                                entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a dolares de Hong Kong");
+                                n = Double.parseDouble(entrada);
+                                n = (n) / (2.55);  
+                                JOptionPane.showMessageDialog(null, "Tienes: " + n + " dolar(es) de Hong Kong");
+                                break;  // fin case 4
+                
+                            default: JOptionPane.showMessageDialog(null, "Bye");
+                            break;
+                        } // fin switch
+                    } 
+                } 
             
         </pre>
     </div>
