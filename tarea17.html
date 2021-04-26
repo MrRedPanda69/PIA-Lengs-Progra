@@ -29,6 +29,64 @@
 
     <div class="consola">
         <pre>
+            <span class="co">
+                /*
+                    Alumno: Jorge Gregorio Loredo Hernández
+                    Matricula: 1736010
+                    Tarea 17:
+                    Elabore un programa en JAVA que a través de un Menú de opciones permita al usuario convertir de pesos a las siguientes monedas:
+                    1. Dolar
+                    2. Euro
+                    3. Yen(Japonés)
+                    4. Dolar de Hong Kong
+                    (Notas:
+                    Las equivalencias deberán definirse dentro del programa.
+                    Usar el cuadro de dialogo, showOptionDialog(), para seleccionar : Dólar, Euro, Yen, DolarHK)
+                */
+            </span>
+
+                import javax.swing.JOptionPane;
+
+                public class tarea17 {
+                    public static void main(String[] args) {
+                        String entrada;
+
+                        String[] options = {"Dolar", "Euro", "Yen", "Dolar HK"};
+                        int v = JOptionPane.showOptionDialog(null, 
+                        "Selecciona tu tipo de moneda a convertir",
+                        "Convertidor de MXN pesos a distintas monedas internacionales",
+                        JOptionPane.YES_NO_CANCEL_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        options,
+                        options[0]);
+                        double n;
+                        if(v == 0) {
+                            entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a dolares");
+                            n = Double.parseDouble(entrada);
+                            n = (n) / (19.83);  
+                            JOptionPane.showMessageDialog(null, "Tienes: " + n + " dolar(es)");
+
+                        } /* if dolar */ else if(v == 1) {
+                            entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a euros");
+                            n = Double.parseDouble(entrada);
+                            n = (n) / (23.85);  
+                            JOptionPane.showMessageDialog(null, "Tienes: " + n + " euro(s)");
+
+                        } /* else if euro*/ else if(v == 2) {
+                            entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a yenes");
+                            n = Double.parseDouble(entrada);
+                            n = (n) / (0.18);  
+                            JOptionPane.showMessageDialog(null, "Tienes: " + n + " yen(es)");
+
+                        } /* else if yen */ else if(v == 3) {
+                            entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a dolares de Hong Kong");
+                            n = Double.parseDouble(entrada);
+                            n = (n) / (2.55);  
+                            JOptionPane.showMessageDialog(null, "Tienes: " + n + " dolar(es) de Hong Kong");
+                        } /* else if dls HK */
+                    }
+                }
             
         </pre>
     </div>
