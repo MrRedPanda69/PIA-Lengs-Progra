@@ -45,54 +45,55 @@
                 */
             </span>
 
-                import javax.swing.JOptionPane;
+                <span class="fce">import javax.swing.JOptionPane</span>;
 
-                public class tarea17 {
-                    public static void main(String[] args) {
-                        String entrada;
+                <span class="fce">public class</span> <span class="pr">tarea17</span> {
+                    <span class="fce">public static void</span> <span class="pr">main</span>(<span class="fce">String</span>[] <span class="re">args</span>) {
+                        <span class="fce">String</span> <span class="re">entrada</span>;
                 
-                        String[] options = {"X", "Dolar", "Euro", "Yen", "Dolar HK"};
-                        int v = JOptionPane.showOptionDialog(null, 
-                        "Selecciona tu tipo de moneda a convertir",
-                        "Convertidor de MXN pesos a distintas monedas internacionales",
-                        JOptionPane.YES_NO_CANCEL_OPTION,
-                        JOptionPane.QUESTION_MESSAGE,
-                        null,
+                        <span class="fce">String</span>[] <span class="re">options</span> <span class="gen">=</span> {<span class="st">"X"</span>, <span class="st">"Dolar"</span>, <span class="st">"Euro"</span>, <span class="st">"Yen"</span>, <span class="st">"Dolar HK"</span>};
+                        <span class="fce">int</span> <span class="re">v</span> <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showOptionDialog</span>(<span class="gen">null</span>, 
+                        <span class="st">"Selecciona tu tipo de moneda a convertir"</span>,
+                        <span class="st">"Convertidor de MXN pesos a distintas monedas internacionales"</span>,
+                        <span class="re">JOptionPane</span>.<span class="re">YES_NO_CANCEL_OPTION</span>,
+                        <span class="re">JOptionPane</span>.<span class="re">QUESTION_MESSAGE</span>,
+                        <span class="gen">null</span>,
                         options,
-                        options[1]);
-                        double n;
-                        switch(v) {
-                            case 1:
-                                entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a dolares");
-                                n = Double.parseDouble(entrada);
-                                n = (n) / (19.83);  
-                                JOptionPane.showMessageDialog(null, "Tienes: " + n + " dolar(es)");
-                                break;  // fin case 1
+                        options[<span class="nu">0</span>]);
+                        <span class="fce">float</span> <span class="re">n</span>;
+                        <span class="fce">double</span> <span class="re">y</span>;
+                        <span class="fce">switch</span>(v) {
+                            <span class="fce">case</span> <span class="nu">1</span><span class="fce">:</span>
+                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos para convertirlo a dolares"</span>);
+                                n <span class="gen">=</span> <span class="re">Float</span>.<span class="pr">parseFloat</span>(entrada);
+                                n <span class="gen">=</span> (n) <span class="gen">/</span> (<span class="nu">1983</span> <span class="gen">/</span> <span class="nu">100</span>);  
+                                <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Tienes: "</span> <span class="gen">+</span> <span class="nu">n</span> <span class="gen">+</span> <span class="st">" dolar(es)"</span>);
+                                <span class="fce">break</span>;  <span class="co">// fin case 1</span>
                 
-                            case 2:
-                                entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a euros");
-                                n = Double.parseDouble(entrada);
-                                n = (n) / (23.85);  
-                                JOptionPane.showMessageDialog(null, "Tienes: " + n + " euro(s)");
-                                break;  // fin case 2
+                            <span class="fce">case</span> <span class="nu">2</span><span class="fce">:</span>
+                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos para convertirlo a euros"</span>);
+                                n <span class="gen">=</span> <span class="re">Float</span>.<span class="pr">parseFloat</span>(entrada);
+                                n <span class="gen">=</span> (n) <span class="gen">/</span> (<span class="nu">477</span> <span class="gen">/</span> <span class="nu">20</span>);  
+                                <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Tienes: "</span> <span class="gen">+</span> <span class="nu">n</span> <span class="gen">+</span> <span class="st">" euro(s)"</span>);
+                                <span class="fce">break</span>;  <span class="co">// fin case 2</span>
                             
-                            case 3:  
-                                entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a yenes");
-                                n = Double.parseDouble(entrada);
-                                n = (n) / (0.18);  
-                                JOptionPane.showMessageDialog(null, "Tienes: " + n + " yen(es)");
-                                break;  // fin case 3
+                            <span class="fce">case</span> <span class="nu">3</span><span class="fce">:</span>  
+                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos para convertirlo a yenes"</span>);
+                                y <span class="gen">=</span> <span class="re">Double</span>.<span class="pr">parseDouble</span>(entrada);
+                                y <span class="gen">=</span> (y) <span class="gen">/</span> (<span class="nu">0.18</span>);  
+                                <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Tienes: "</span> <span class="gen">+</span> <span class="nu">y</span> <span class="gen">+</span> <span class="st">" yen(es)"</span>);
+                                <span class="fce">break</span>;  <span class="co">// fin case 3</span>
                 
-                            case 4:
-                                entrada = JOptionPane.showInputDialog("Ingresa la cantidad en pesos para convertirlo a dolares de Hong Kong");
-                                n = Double.parseDouble(entrada);
-                                n = (n) / (2.55);  
-                                JOptionPane.showMessageDialog(null, "Tienes: " + n + " dolar(es) de Hong Kong");
-                                break;  // fin case 4
+                            <span class="fce">case</span> <span class="nu">4</span><span class="fce">:</span>
+                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos para convertirlo a dolares de Hong Kong"</span>);
+                                n <span class="gen">=</span> <span class="re">Float</span>.<span class="pr">parseFloat</span>(entrada);
+                                n <span class="gen">=</span> (n) <span class="gen">/</span> (<span class="nu">51</span> <span class="gen">/</span> <span class="nu">20</span>);  
+                                <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Tienes: "</span> <span class="gen">+</span> <span class="nu">n</span> <span class="gen">+</span> <span class="st">" dolar(es) de Hong Kong"</span>);
+                                <span class="fce">break</span>;  <span class="co">// fin case 4</span>
                 
-                            default: JOptionPane.showMessageDialog(null, "Bye");
-                            break;
-                        } // fin switch
+                            default: <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Bye"</span>);
+                            <span class="fce">break</span>;
+                        } <span class="co">// fin switch</span>
                     } 
                 } 
             
