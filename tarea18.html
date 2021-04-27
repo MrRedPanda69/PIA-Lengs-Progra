@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/pigments.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <title>Tareas Página Principal</title>
+    <title>Tarea# 18</title>
 </head>
 
 <body class="tareas">
@@ -27,9 +27,36 @@
 <main>
     <h1 class="white"><span class="eva">Tarea #18: </span>Serie A en Java</h1>
 
+    <div class="centrado">
+        <img class="legs-tareas" src="img/ss tarea 18.png" alt="Serie tarea 18">
+    </div>
+
     <div class="consola">
         <pre>
-            
+            <span class="co">
+            /*
+                Alumno: Jorge Gregorio Loredo Hernández
+                Matricula: 1736010
+                Tarea 18:
+                Construya un programa en JAVA. Que calcule e imprima la siguiente serie para los N primeros  términos
+                1, 8, 243, 16384, 1953125 ...
+            */
+            </span>
+
+            <span class="fce">import java.util.Scanner</span>;
+
+            <span class="fce">public class</span> <span class="pr">tarea18</span> {
+                <span class="fce">public static void</span> <span class="pr">main</span>(<span class="fce">String</span>[] <span class="fce">args</span>) {
+                    <span class="fce">Scanner</span> <span class="re">lec</span> <span class="gen">=</span> <span class="fce">new</span> <span class="pr">Scanner</span>(<span class="re">System.in</span>);
+                    <span class="fce">int</span> <span class="re">n</span>;
+                    <span class="fce">int</span> <span class="re">i</span>;
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Ingrese el total de numeros: "</span>);
+                    n <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    <span class="fce">for</span>(<span class="nu">i</span> <span class="gen">=</span> <span class="nu">1</span>; <span class="nu">i</span> <span class="gen"><=</span> <span class="nu">n</span>; <span class="nu">i</span><span class="gen">++</span>) {
+                        <span class="re">System.out</span>.<span class="pr">println</span>(<span class="re">Math</span>.<span class="pr">pow</span>(<span class="nu">i</span>, ((<span class="nu">2</span> <span class="gen">*</span> <span class="nu">i</span>) <span class="gen">-</span> 1)) <span class="gen">+</span> <span class="st">","</span>);
+                    }
+                } 
+            } 
         </pre>
     </div>
 </main>
