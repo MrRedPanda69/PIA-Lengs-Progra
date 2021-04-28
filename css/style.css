@@ -182,3 +182,11 @@ span {
 	overflow: auto;
     padding: 1ex 2ex 1ex 2ex;
 }
+.tarea-nav {
+    color:greenyellow;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.tarea-nav:hover {
+    color: orange;
+}
