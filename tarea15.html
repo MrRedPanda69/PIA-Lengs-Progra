@@ -32,9 +32,45 @@
     </div>
 
     <h2>Símbolos</h2>
-    <p>
-        
-    </p>
+    <div class="cont">
+        <div>
+            <p>
+                Operadores Aritmeticos:
+            </p>
+            <div>
+                <ul>
+                    <li><span class="eva">Exponencial: </span>**</li>
+                    <li><span class="eva">Multiplicación, división, módulo: </span>*, /, %</li>
+                    <li><span class="eva">Suma y resta: </span>+, –</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <p>
+                Operadores Relacionales:
+            </p>
+            <ul>
+                <li><span class="eva">Igual que: </span></li>
+                <li><span class="eva">Diferente de: </span>!=</li>
+                <li><span class="eva">Menor que: </span><</li>
+                <li><span class="eva">Mayor que: </span>></li>
+                <li><span class="eva">Menor o igual que: </span><=</li>
+                <li><span class="eva">Mayor o igual que: </span>>=</li>
+            </ul>
+        </div>
+
+        <div>
+            <p>
+                Operadores Lógicos:
+            </p>
+            <ul>
+                <li><span class="eva">Y: </span>&&, and</li>
+                <li><span class="eva">O: </span>||, or</li>
+                <li><span class="eva">No: </span>!</li>
+            </ul>
+        </div>
+    </div>
 
     <h2>Sintaxis</h2>
     <p>
@@ -52,34 +88,21 @@
 
     <h2>Aplicación para editar y ejecutar</h2>
     <p>
-        Sistemas Gestores de Paquetes <br>
-
-        Si no puedes compilar tu propia versión de Ruby y tampoco quieres usar una herramienta de terceros, puedes usar el sistema gestor de paquetes de tu sistema para instalar Ruby. <br>
-        Algunos miembros de la comunidad Ruby sienten que debes evitar gestores de paquetes para instalar Ruby y deberías en su lugar usar herramientas dedicadas. <br>
-        Es posible que algunos gestores de paquetes importantes insten versiones anteriores de Ruby en lugar de la ultima versión. Para usar la última versión de Ruby, revisa que el nombre del paquete coincida con el número de versión. O usa un instalador dedicado. <br>
-    </p>    
-    <p>
-        <span class="eva">apt</span> (<span class="eva">Debian o Ubuntu</span>) <br>
-
-        Debian GNU/Linux y Ubuntu usan el gestor de paquetes apt. Se usa de la siguiente manera:
-        </p> 
-        <div class="consola">
-            <pre>
-                <span class="st">$ sudo</span> apt-get <span class="st">install</span> ruby-full
-            </pre>
-        </div>
+        El entorno de ejecución de Ruby es la pila de software encargada de instalar el código de tu aplicación y sus dependencias, y de ejecutar la aplicación. El entorno de ejecución se declara en app.yaml como runtime: ruby:
     </p>
-    
-    <p>
-    <span class="eva">yum</span> (<span class="eva">CentOS, Fedora, or RHEL</span>) <br>
-    CentOS, Fedora, y RHEL usan el gestor de paquetes yum. Se usa de la siguiente manera:
-    </p>
-
     <div class="consola">
         <pre>
-            <span class="st">$ sudo</span> yum <span class="st">install</span> ruby
+            runtime: ruby
+            env: flex
         </pre>
     </div>
+    
+    <p>
+        Los entornos de ejecución en el entorno flexible se compilan con Docker. El entorno de ejecución de Ruby se basa en Ubuntu 16.04. El código fuente para el entorno de ejecución de Ruby está disponible de forma pública en GitHub.
+    </p>
+    <p>
+        Así mismo, ruby puede ser editado en cualquier editor de codigo como Visual Studio Code, Eclipse, NetBeans, Atom, etc.
+    </p>
 
     <h2>Tipo de paradigma:</h2>
     <p>
