@@ -33,12 +33,34 @@
 
     <h2>Símbolos</h2>
     <p>
-        
+        <span class="eva">Literales de tipo carácter</span>
+        <br>
+        Contienen un único carácter, por ejemplo: A. Aquí sí se diferencian mayúsculas de minúsculas. Se delimitan por un apóstrofe.
+        <br>
+        Ejemplos: 'A' 'ñ' '%' 
+    </p>
+    <p>
+        <span class="eva">Cadenas de caracteres</span>
+        <br>
+        Contienen uno o varios caracteres y se delimitan por el carácter de dobles comillas: ", por ejemplo: <span class="st">"ABC"</span>. En este caso se diferencian mayúsculas de minúsculas. 
+    </p>
+    <p>
+        Delimitadores
+        <br>
+        Los delimitadores pueden ser uno de los siguientes caracteres especiales: <span class="gen">&'()*+,-./:;=</span> O ser uno de los delimitadores compuestos por dos caracteres especiales: "<span class="gen">=..**:=/===</span>" 
+    </p>
+    <p>
+        <span class="eva">Lista de palabras reservadas:</span> "<span class="re">abort, else, new, return, abs, elsif, not, reverse, abstract, end, null, accept, entry, select access, exception, of, separate, aliased, exit, or, subtype, all, others, and, for, out, tagged, array, function, task, at, package, terminate, generic, pragma, then, begin, goto, private, type, body, procedure, if, protected, until, case, in, use, constant, is, raise, range, when, declare, limited, record, while delay, loop, rem, with, delta, renames, digits, mod, requeue, xor, do</span>" 
     </p>
 
     <h2>Sintaxis</h2>
     <p>
-
+        Ada es un lenguaje de programación orientado a objetos y fuertemente tipado de forma estática que fue diseñado por Jean Ichbiah de CII Honeywell Bull por encargo del Departamento de Defensa de los Estados Unidos. Es un lenguaje multipropósito, orientado a objetos y concurrente, pudiendo llegar desde la facilidad de Pascal hasta la flexibilidad de C++. 
+    </p>
+    <p>
+        Es indiferente el uso de mayúsculas y minúsculas en los identificadores y palabras claves, es decir es un lenguaje case-insensitive. En Ada, todo el programa es un único procedimiento, que puede contener subprogramas (procedimientos o funciones).
+        <br>
+        Cada sentencia se cierra con end qué_cerramos. Es un modo de evitar errores y facilitar la lectura. No es necesario hacerlo en el caso de subprogramas, aunque todos los manuales lo aconsejan y casi todos los programadores de Ada lo hacen. El operador de asignación es :=, el de igualdad =. A los programadores de C y similares les puede confundir este rasgo inspirado en Pascal. La sintaxis de atributos predefinidos es Objeto'Atributo (o Tipo'Atributo) (nota: esto sólo aplica a atributos predefinidos por el lenguaje, ya que no es el concepto de atributo típico de OOP). 
     </p>
 
     <h2>Esqueleto de los programas</h2>
@@ -54,7 +76,7 @@
 
     <h2>Aplicación para editar y ejecutar</h2>
     <p>
-
+        Un compilador de Ada muy usado es GNAT, originalmente desarrollado por la Universidad de Nueva York bajo patrocinio del DoD. Está basado en la tecnología de GCC y es software libre. Actualmente está mantenido por AdaCore (antes llamada Ada Core Technologies), empresa que ofrece soporte y servicios sobre el compilador.Existen otros compiladores comerciales. 
     </p>
 
     <h2>Tipo de paradigma:</h2>
@@ -65,7 +87,18 @@
     <h2>Ejemplo de un programa en Ada:</h2>
     <div class="consola">
         <pre>
-
+            <span class="re">generic</span>
+            ValorInicial: <span class="gen">Natural :=</span> <span class="nu">1</span>;  <span class="co">-- Parám. genérico con valor por defecto.</span>
+            <span class="re">package</span> <span class="fce">Semaforos</span> <span class="re">is</span>
+            <span class="re">type</span> <span class="gen">TSemaforo</span> <span class="re">is limited private</span>;
+            <span class="re">procedure</span> <span class="fce">Wait</span>; (Sem: in out TSemaforo);
+            <span class="re">procedure</span> <span class="fce">Signal</span>; (Sem: in out TSemaforo);
+            <span class="re">private</span>
+            <span class="re">task type</span> <span class="gen">TSemaforo</span> <span class="re">is</span>
+                <span class="re">entry</span> <span class="fce">Wait</span>;
+                <span class="re">entry</span> <span class="fce">Signal</span>;
+            <span class="re">end</span> <span class="fce">TSemaforo</span>;
+            <span class="re">end</span> <span class="fce">Semaforos</span>;
         </pre>
     </div>
 </main>
