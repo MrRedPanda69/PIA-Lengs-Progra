@@ -33,12 +33,23 @@
 
     <h2>Símbolos</h2>
     <p>
-        
+        Caracteres Especiales:
     </p>
+    <div>
+        <ul>
+            <li><span class="eva">Suma:</span> +</li>
+            <li><span class="eva">Resta:</span> -</li>
+            <li><span class="eva">Multiplicación:</span> *</li>
+            <li><span class="eva">División:</span> /</li>
+            <li><span class="eva">Mayor que:</span> ></li>
+            <li><span class="eva">Menor que:</span> <</li>
+        </ul>
+    </div>
+    
 
     <h2>Sintaxis</h2>
     <p>
-
+        La  estructura  de  COBOL  es  totalmente  diferente  a  la  estructura  de  cualquier  otro  lenguaje.  Esta  especialización  impide  aunque  de  forma  muy  simple  que  expertos  programadores  vean  COBOL  como  diferente  e  inaccesible    para  ellos  debido  a  las  grandes  diferencias  que  se  encuentran  con  la  programación  tradicional estructurada. Sin embargo aprender COBOL es mucho más fácil que aprender los otros lenguajes que existen en el mercado, con el inconveniente de no poder hacer de todo con él. Un inconveniente que tiene COBOL a la hora de programar es lo estricto que es cuando se definen las variables, sin embargo, gracias a esta precisión hace que el programa resulte más rápido que si estuviera realizado por otros lenguajes. 
     </p>
 
     <h2>Esqueleto de los programas</h2>
@@ -57,7 +68,7 @@
 
     <h2>Aplicación para editar y ejecutar</h2>
     <p>
-
+        Existen compiladores COBOL gratuitos para enseñar cómo funciona la programación en este sistema. Los más destacados son Tiny COBOL, Open COBOL y Cevela MX COBOL, todos disponen de código abierto.
     </p>
 
     <h2>Tipo de paradigma:</h2>
@@ -68,7 +79,151 @@
     <h2>Ejemplo de un programa en Cobol:</h2>
     <div class="consola">
         <pre>
-
+            ***************************************************
+            * Procedimiento almacenado COBOL SAMPLE.COBSAMP
+            * @param Action
+            * @param City
+            * @param Country
+            * @param Response
+            ***************************************************
+            IDENTIFICATION DIVISION.
+            PROGRAM-ID. COBSAMP.
+            ENVIRONMENT DIVISION.
+            DATA DIVISION.
+            WORKING-STORAGE SECTION.
+                EXEC SQL INCLUDE SQLCA END-EXEC.
+            01 Sqlcode-Pic PIC +++999 USAGE DISPLAY.
+            LINKAGE SECTION.
+            01 Action.
+                49 VAR-LEN  PIC S9(4)  USAGE BINARY.
+                49 VAR-TEXT PIC X9(8)  USAGE DISPLAY.
+            01 City.
+                49 VAR-LEN  PIC S9(4)  USAGE BINARY.
+                49 VAR-TEXT PIC X9(32) USAGE DISPLAY.
+            01 Country.
+                49 VAR-LEN  PIC S9(4)  USAGE BINARY.
+                49 VAR-TEXT PIC X9(32) USAGE DISPLAY.
+            01 Response.
+                49 VAR-LEN  PIC S9(4)  USAGE BINARY.
+                49 VAR-TEXT PIC X9(80) USAGE DISPLAY.
+            PROCEDURE DIVISION USING
+                Action
+                City
+                Country
+                Response.
+                Move Function Upper-case(VAR-TEXT of Action)
+                to VAR-TEXT of Action
+                Evaluate VAR-TEXT of Action(1:VAR-LEN of Action)
+                When 'S'
+                When 'SELECT'
+                    Evaluate true also true
+                    When VAR-LEN of City = 0 also VAR-LEN of Country = 0
+                        EXEC SQL
+                        DECLARE C1 CURSOR WITH RETURN WITH HOLD FOR
+                            SELECT * FROM SAMPLE.CITYTABLE
+                        END-EXEC
+                        EXEC SQL
+                        OPEN C1
+                        END-EXEC
+                    When VAR-LEN of City = 0 also VAR-LEN of Country > 0
+                        EXEC SQL
+                        DECLARE C2 CURSOR WITH RETURN WITH HOLD FOR
+                            SELECT * FROM SAMPLE.CITYTABLE
+                            WHERE COUNTRY=:COUNTRY
+                        END-EXEC
+                        EXEC SQL
+                        OPEN C2
+                        END-EXEC
+                    When VAR-LEN of City > 0 also VAR-LEN of Country = 0
+                        EXEC SQL
+                        DECLARE C3 CURSOR WITH RETURN WITH HOLD FOR
+                            SELECT * FROM SAMPLE.CITYTABLE
+                            WHERE CITY=:CITY
+                        END-EXEC
+                        EXEC SQL
+                        OPEN C3
+                        END-EXEC
+                    When Other
+                        EXEC SQL
+                        DECLARE C4 CURSOR WITH RETURN WITH HOLD FOR
+                            SELECT * FROM SAMPLE.CITYTABLE
+                            WHERE CITY=:CITY AND COUNTRY=:COUNTRY
+                        END-EXEC
+                        EXEC SQL
+                        OPEN C4
+                        END-EXEC
+                    End-Evaluate
+                    If Sqlcode = 0 then
+                    String 'Seleccionar satisfactorio'
+                        delimited by Size into VAR-TEXT of Response
+                    Else
+                    Move SQLCode to SQLCode-Pic
+                    String 'Seleccionar no satisfactorio: Sqlcode ' Sqlcode-Pic
+                        delimited by Size into VAR-TEXT of Response
+                    End-If
+                When 'I'
+                When 'INSERT'
+                    Evaluate true also true
+                    When VAR-LEN of City = 0 also VAR-LEN of Country = 0
+                        String 'Insertar no satisfactorio: '
+                                'Ciudad y País no especificados'
+                        delimited by Size into VAR-TEXT of Response
+                    When VAR-LEN of City = 0 also VAR-LEN of Country > 0
+                        String 'Insertar no satisfactorio: Ciudad no especificada'
+                        delimited by Size into VAR-TEXT of Response
+                    When VAR-LEN of City > 0 also VAR-LEN of Country = 0
+                        String 'Insertar no satisfactorio: País no especificado'
+                        delimited by Size into VAR-TEXT of Response
+                    When Other
+                        EXEC SQL
+                        INSERT INTO SAMPLE.CITYTABLE
+                            (CITY, COUNTRY) VALUES (:CITY, :COUNTRY)
+                        END-EXEC
+                        If Sqlcode = 0 then
+                        String 'Insertar satisfactorio'
+                            delimited by Size into VAR-TEXT of Response
+                        Else
+                        Move SQLCode to SQLCode-Pic
+                        String 'Insertar no satisfactorio: Sqlcode ' Sqlcode-Pic
+                            delimited by Size into VAR-TEXT of Response
+                        End-If
+                    End-Evaluate
+                When 'D'
+                When 'DELETE'
+                    Evaluate true also true
+                    When VAR-LEN of City = 0 also VAR-LEN of Country = 0
+                        String 'Suprimir no satisfactorio: '
+                                'Ciudad y País no especificados'
+                        delimited by Size into VAR-TEXT of Response
+                    When VAR-LEN of City = 0 also VAR-LEN of Country > 0
+                        String 'Suprimir no satisfactorio: Ciudad no especificada'
+                        delimited by Size into VAR-TEXT of Response
+                    When VAR-LEN of City > 0 also VAR-LEN of Country = 0
+                        String 'Suprimir no satisfactorio: País no especificado'
+                        delimited by Size into VAR-TEXT of Response
+                    When Other
+                        EXEC SQL
+                        DELETE FROM SAMPLE.CITYTABLE
+                            WHERE CITY=:CITY AND COUNTRY=:COUNTRY
+                        END-EXEC
+                        If Sqlcode = 0 then
+                        String 'Suprimir satisfactorio'
+                            delimited by Size into VAR-TEXT of Response
+                        Else
+                        Move SQLCode to SQLCode-Pic
+                        String 'Suprimir no satisfactorio: Sqlcode ' Sqlcode-Pic
+                            delimited by Size into VAR-TEXT of Response
+                        End-If
+                    End-Evaluate
+                When Other
+                    String 'Acción "'
+                            VAR-TEXT of Action(1:VAR-LEN of Action)
+                            '" no soportada'
+                    delimited by Size into VAR-TEXT of Response
+                End-Evaluate.
+                Inspect VAR-TEXT of Response tallying VAR-LEN of Response
+                for characters before initial x'00'
+                GOBACK.
         </pre>
     </div>
 </main>
