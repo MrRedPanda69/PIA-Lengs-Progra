@@ -13,6 +13,7 @@ public class tarea19 {
         int n;
         int i;
         int b;
+        int r = 0;
         int[] A;
         System.out.print("Ingresa el total de numeros: ");
         n = lec.nextInt();
@@ -32,12 +33,11 @@ public class tarea19 {
         } // Fin for impresion de vector
         System.out.println("]");
 
-        System.out.print("El numero " + b + " se impimio ");
         for(int v : A) {
             if(v == b) {
-                System.out.print( v + " ");
+                r++;
             }
         }
-        System.out.print("veces.");
+        System.out.print("El numero " + b + " se impimio " + r + " veces.");
     }
 }
