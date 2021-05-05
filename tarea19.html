@@ -29,7 +29,52 @@
 
     <div class="consola">
         <pre>
-            
+            <span class="co">
+            /*
+                Alumno: Jorge Gregorio Loredo Hernández
+                Matricula: 1736010
+                Tarea 19:
+                Elaborar un programa en JAVA que realice una búsqueda de un número en un vector, mostrando solamente 
+                un mensaje indicando cuantas veces apareció el número. Además de imprimir el vector
+            */  
+            </span>
+
+            <span class="fce">import java.util.Scanner</span>;
+
+            <span class="fce">public class</span> <span class="pr">tarea19</span> {
+                <span class="fce">public static void</span> <span class="pr">main</span>(<span class="fce">String</span>[] <span class="re">args</span>) {
+                    <span class="fce">Scanner</span> <span class="re">lec</span> <span class="gen">=</span> <span class="fce">new</span> <span class="pr">Scanner</span>(<span class="re">System.in</span>);
+                    <span class="fce">int</span> <span class="re">n</span>;
+                    <span class="fce">int</span> <span class="re">i</span>;
+                    <span class="fce">int</span> <span class="re">b</span>;
+                    <span class="fce">int</span> <span class="re">r</span> <span class="gen">=</span> <span class="nu">0</span>;
+                    <span class="fce">int</span>[] <span class="re">A</span>;
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Ingresa el total de numeros: "</span>);
+                    n <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    A <span class="gen">=</span> <span class="fce">new int</span>[n];
+
+                    <span class="fce">for</span>(i <span class="gen">=</span> <span class="nu">0</span>; i <span class="gen"><</span> n; i<span class="gen">++</span> ) {
+                        <span class="re">System.out</span>.<span class="pr">print</span>( <span class="st">"A[ "</span> <span class="gen">+</span> (i <span class="gen">+</span> <span class="nu">1</span>) <span class="gen">+</span> <span class="st">" ]= "</span> );
+                        <span class="gen">A</span>[i] <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    } <span class="co">// Fin for</span>
+
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Que numero quieres buscar? "</span>);
+                    b <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"A = [ "</span>);
+                    <span class="fce">for</span>(i <span class="gen">=</span> <span class="nu">0</span>; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="re">System.out</span>.<span class="pr">print</span>(<span class="fce">A</span>[i] <span class="gen">+</span> <span class="st">" "</span>);
+                    } <span class="co">// Fin for impresion de vector</span>
+                    <span class="re">System.out</span>.<span class="pr">println</span>(<span class="st">"]"</span>);
+
+                    <span class="fce">for</span>(int v : A) {
+                        <span class="fce">if</span>(v <span class="gen">==</span> b) {
+                            r<span class="gen">++</span>;
+                        }
+                    }
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"El numero "</span> <span class="gen">+</span> b <span class="gen">+</span> <span class="st">" se impimio "</span> <span class="gen">+</span> r <span class="gen">+</span> <span class="st">" veces."</span>);
+                }
+            }
         </pre>
     </div>
 </main>
