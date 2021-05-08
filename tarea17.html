@@ -34,7 +34,8 @@
                     Alumno: Jorge Gregorio Loredo Hernández
                     Matricula: 1736010
                     Tarea 17:
-                    Elabore un programa en JAVA que a través de un Menú de opciones permita al usuario convertir de pesos a las siguientes monedas:
+                    Elabore un programa en JAVA que a través de un Menú de opciones permita al usuario 
+                    convertir de pesos a las siguientes monedas:
                     1. Dolar
                     2. Euro
                     3. Yen(Japonés)
@@ -64,28 +65,36 @@
                         <span class="fce">double</span> <span class="re">y</span>;
                         <span class="fce">switch</span>(v) {
                             <span class="fce">case</span> <span class="nu">1</span><span class="fce">:</span>
-                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos para convertirlo a dolares"</span>);
+                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos 
+                                para convertirlo a dolares"</span>);
+
                                 n <span class="gen">=</span> <span class="re">Float</span>.<span class="pr">parseFloat</span>(entrada);
                                 n <span class="gen">=</span> (n) <span class="gen">/</span> (<span class="nu">1983</span> <span class="gen">/</span> <span class="nu">100</span>);  
                                 <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Tienes: "</span> <span class="gen">+</span> <span class="nu">n</span> <span class="gen">+</span> <span class="st">" dolar(es)"</span>);
                                 <span class="fce">break</span>;  <span class="co">// fin case 1</span>
                 
                             <span class="fce">case</span> <span class="nu">2</span><span class="fce">:</span>
-                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos para convertirlo a euros"</span>);
+                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos
+                                para convertirlo a euros"</span>);
+
                                 n <span class="gen">=</span> <span class="re">Float</span>.<span class="pr">parseFloat</span>(entrada);
                                 n <span class="gen">=</span> (n) <span class="gen">/</span> (<span class="nu">477</span> <span class="gen">/</span> <span class="nu">20</span>);  
                                 <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Tienes: "</span> <span class="gen">+</span> <span class="nu">n</span> <span class="gen">+</span> <span class="st">" euro(s)"</span>);
                                 <span class="fce">break</span>;  <span class="co">// fin case 2</span>
                             
                             <span class="fce">case</span> <span class="nu">3</span><span class="fce">:</span>  
-                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos para convertirlo a yenes"</span>);
+                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos
+                                para convertirlo a yenes"</span>);
+
                                 y <span class="gen">=</span> <span class="re">Double</span>.<span class="pr">parseDouble</span>(entrada);
                                 y <span class="gen">=</span> (y) <span class="gen">/</span> (<span class="nu">0.18</span>);  
                                 <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Tienes: "</span> <span class="gen">+</span> <span class="nu">y</span> <span class="gen">+</span> <span class="st">" yen(es)"</span>);
                                 <span class="fce">break</span>;  <span class="co">// fin case 3</span>
                 
                             <span class="fce">case</span> <span class="nu">4</span><span class="fce">:</span>
-                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos para convertirlo a dolares de Hong Kong"</span>);
+                                entrada <span class="gen">=</span> <span class="re">JOptionPane</span>.<span class="pr">showInputDialog</span>(<span class="st">"Ingresa la cantidad en pesos
+                                para convertirlo a dolares de Hong Kong"</span>);
+                                
                                 n <span class="gen">=</span> <span class="re">Float</span>.<span class="pr">parseFloat</span>(entrada);
                                 n <span class="gen">=</span> (n) <span class="gen">/</span> (<span class="nu">51</span> <span class="gen">/</span> <span class="nu">20</span>);  
                                 <span class="re">JOptionPane</span>.<span class="pr">showMessageDialog</span>(<span class="gen">null</span>, <span class="st">"Tienes: "</span> <span class="gen">+</span> <span class="nu">n</span> <span class="gen">+</span> <span class="st">" dolar(es) de Hong Kong"</span>);
