@@ -29,7 +29,63 @@
 
     <div class="consola">
         <pre>
+            <span class="co">
+            /*
+                Alumno: Jorge Gregorio Loredo Hernández
+                Matricula: 1736010
+                Tarea 20:
+                Construya un programa en JAVA que, al recibir como datos un arreglo bidimensional de
+                NxM elementos de tipo entero y un número entero, determine cuántas veces se encuentra 
+                este número dentro del arreglo. Además, que imprima la matriz al final 
+            */
+            </span>
             
+            <span class="fce">import java.util.Scanner</span>;
+            <span class="fce">public class</span> <span class="pr">tarea20</span> {
+            <span class="fce">public static void</span> <span class="pr"></span>(<span class="fce">String</span>[] <span class="re">args</span>) {
+                    <span class="fce">Scanner</span> <span class="re">lec</span> <span class="gen">=</span> <span class="fce">new</span> <span class="pr">Scanner</span>(<span class="re">System.in</span>);
+                    <span class="fce">int</span> <span class="re">i</span>;
+                    <span class="fce">int</span> <span class="re">n</span>;
+                    <span class="fce">int</span> <span class="re">m</span>;
+                    <span class="fce">int</span> <span class="re">j</span>;
+                    <span class="fce">int</span> <span class="re">nb</span>;
+                    <span class="fce">int</span> <span class="re">r</span> <span class="gen">=</span> <span class="nu">0</span>;
+                    <span class="fce">int</span>[][] <span class="re">A</span>;
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Ingresa el total de filas: "</span>);
+                    n <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Ingresa el total de columnas: "</span>);
+                    m <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    A <span class="gen">=</span> <span class="fce">new int</span>[n][m];
+            
+                    <span class="fce">for</span>(i <span class="gen">=</span> <span class="nu">0</span>; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> <span class="nu">0</span>; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"A["</span> <span class="gen">+</span> (i <span class="gen">+</span> <span class="nu">1</span>) <span class="gen">+</span> <span class="st">"]["</span> <span class="gen">+</span> (j <span class="gen">+</span> <span class="nu">1</span>) <span class="gen">+</span> <span class="st">"]"</span>);
+                            <span class="fce">A</span>[i][j] <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                        }
+                    }
+            
+                    <span class="re">System.out</span>.<span class="pr">println</span>(<span class="st">"--------------------------"</span>);
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Que numero quieres buscar? "</span>);
+                    nb <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+            
+                    <span class="fce">for</span>(i <span class="gen">=</span> <span class="nu">0</span>; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> <span class="nu">0</span>; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="fce">if</span>(<span class="fce">A</span>[i][j] <span class="gen">==</span> nb) {
+                                r<span class="gen">++</span>;
+                            }
+                        }
+                    }
+            
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"A["</span> + n + <span class="st">"]["</span> + m + <span class="st">"]</span><span class="gen">\n</span><span class="st">"</span>);
+                    <span class="fce">for</span>(i <span class="gen">=</span> <span class="nu">0</span>; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> <span class="nu">0</span>; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="re">System.out</span>.<span class="pr">print</span>(<span class="fce">A</span>[i][j] <span class="gen">+</span> <span class="st">" "</span>);
+                        }
+                        <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"</span><span class="gen">\n</span><span class="st">"</span>);
+                    }
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"El numero "</span> <span class="gen">+</span> nb <span class="gen">+</span> <span class="st">" se impimio "</span> <span class="gen">+</span> r <span class="gen">+</span> <span class="st">" veces."</span>);
+                }
+            }
         </pre>
     </div>
 </main>
