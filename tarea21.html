@@ -39,74 +39,74 @@
                 este número dentro del arreglo. Además, que imprima la matriz al final 
             */
         </span>    
-            import java.util.Scanner;
-            public class tarea21 {
-                public static void main(String[] args) {
-                    Scanner lec = new Scanner(System.in);
-                    int i;
-                    int n;
-                    int m;
-                    int j;
-                    int[][] A;   // Primer Matriz
-                    int[][] B;   // Segunda Matriz
-                    int[][] C = new int [20][20];   // Matriz resultante
+            <span class="fce">import java.util.Scanner</span>;
+            <span class="fce">public class</span> <span class="pr">tarea21</span> {
+                <span class="fce">public static void</span> <span class="pr">main</span>(<span class="fce">String</span>[] <span class="re">args</span>) {
+                    <span class="fce">Scanner</span> <span class="re">lec</span> <span class="gen">=</span> <span class="fce">new</span> <span class="pr">Scanner</span>(<span class="re">System.in</span>);
+                    <span class="fce">int</span> <span class="re">i</span>;
+                    <span class="fce">int</span> <span class="re">n</span>;
+                    <span class="fce">int</span> <span class="re">m</span>;
+                    <span class="fce">int</span> <span class="re">j</span>;
+                    <span class="fce">int</span>[][] <span class="re">A</span>;   <span class="co">// Primer Matriz</span>
+                    <span class="fce">int</span>[][] <span class="re">B</span>;   <span class="co">// Segunda Matriz</span>
+                    <span class="fce">int</span>[][] <span class="re">C</span> <span class="gen">=</span> <span class="fce">new int</span> [<span class="nu">20</span>][<span class="nu">20</span>];   <span class="co">// Matriz resultante</span>
             
-                    // Primer matriz
-                    System.out.print("Ingresa el total de filas para la primer matriz: ");
-                    n = lec.nextInt();
-                    System.out.print("Ingresa el total de columnas para la primer matriz: ");
-                    m = lec.nextInt();
-                    A = new int[n][m];
+                    <span class="co">// Primer Matriz</span>
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Ingresa el total de filas para la primer matriz: "</span>);
+                    n <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Ingresa el total de columnas para la primer matriz: "</span>);
+                    m <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    A <span class="gen">=</span> <span class="fce">new int</span>[n][m];
             
-                    for(i = 0; i < n; i++) {
-                        for(j = 0; j < m; j++) {
-                            System.out.print("A[" + (i + 1) + "][" + (j + 1) + "]");
-                            A[i][j] = lec.nextInt();
+                    <span class="fce">for</span>(i <span class="gen">=</span> 0; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> 0; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"A["</span> <span class="gen">+</span> (i <span class="gen">+</span> <span class="nu">1</span>) <span class="gen">+</span> <span class="st">"]["</span> <span class="gen">+</span> (j <span class="gen">+</span> <span class="nu">1</span>) <span class="gen">+</span> <span class="st">"]"</span>);
+                            <span class="fce">A</span>[i][j] <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
                         }
                     }
-                    System.out.print("A[" + n + "][" + m + "]\n");
-                    for(i = 0; i < n; i++) {
-                        for(j = 0; j < m; j++) {
-                            System.out.print(A[i][j] + " ");
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"A["</span> <span class="gen">+</span> n <span class="gen">+</span> <span class="st">"]["</span> <span class="gen">+</span> m <span class="gen">+</span> <span class="st">"]</span><span class="gen">\n</span><span class="st">"</span>);
+                    <span class="fce">for</span>(i <span class="gen">=</span> 0; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> 0; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="re">System.out</span>.<span class="pr">print</span>(<span class="fce">A</span>[i][j] <span class="gen">+</span> <span class="st">" "</span>);
                         }
-                        System.out.print("\n");
+                        <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"</span><span class="gen">\n</span><span class="st">"</span>);
                     }
                     
-                    // Segunda Matriz
-                    System.out.print("Ingresa el total de filas para la segunda matriz: ");
-                    n = lec.nextInt();
-                    System.out.print("Ingresa el total de columnas para la segunda matriz: ");
-                    m = lec.nextInt();
-                    B = new int[n][m];
+                    <span class="co">// Segunda Matriz</span>
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Ingresa el total de filas para la segunda matriz: "</span>);
+                    n <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"Ingresa el total de columnas para la segunda matriz: "</span>);
+                    m <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
+                    B <span class="gen">=</span> <span class="fce">new int</span>[n][m];
             
-                    for(i = 0; i < n; i++) {
-                        for(j = 0; j < m; j++) {
-                            System.out.print("B[" + (i + 1) + "][" + (j + 1) + "]");
-                            B[i][j] = lec.nextInt();
+                    <span class="fce">for</span>(i <span class="gen">=</span> 0; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> 0; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"B["</span> <span class="gen">+</span> (i <span class="gen">+</span> <span class="nu">1</span>) <span class="gen">+</span> <span class="st">"]["</span> <span class="gen">+</span> (j <span class="gen">+</span> <span class="nu">1</span>) <span class="gen">+</span> <span class="st">"]"</span>);
+                            <span class="fce">B</span>[i][j] <span class="gen">=</span> <span class="re">lec</span>.<span class="pr">nextInt</span>();
                         }
                     }
-                    System.out.print("B[" + n + "][" + m + "]\n");
-                    for(i = 0; i < n; i++) {
-                        for(j = 0; j < n; j++) {
-                            System.out.print(B[i][j] + " ");
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"B["</span> <span class="gen">+</span> n <span class="gen">+</span> <span class="st">"]["</span> <span class="gen">+</span> m <span class="gen">+</span> <span class="st">"]</span><span class="gen">\n</span><span class="st">"</span>);
+                    <span class="fce">for</span>(i <span class="gen">=</span> 0; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> 0; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="re">System.out</span>.<span class="pr">print</span>(<span class="fce">B</span>[i][j] <span class="gen">+</span> <span class="st">" "</span>);
                         }
-                        System.out.print("\n");
+                        <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"</span><span class="gen">\n</span><span class="st">"</span>);
                     }
             
-                    //Suma de Matrices
-                    System.out.print("La suma de las matrices es:\n");
+                    <span class="co">//Suma de Matrices</span>
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"La suma de las matrices es:</span><span class="gen">\n</span><span class="st">"</span>);
             
-                    for(i = 0; i < n; i++) {
-                        for(j = 0; j < m; j++) {
-                            C[i][j] = A[i][j] + B[i][j];
+                    <span class="fce">for</span>(i <span class="gen">=</span> 0; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> 0; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="fce">C</span>[i][j] <span class="gen">=</span> <span class="fce">A</span>[i][j] <span class="gen">+</span> <span class="fce">B</span>[i][j];
                         }
                     }
-                    System.out.print("C[" + n + "][" + m + "]\n");
-                    for(i = 0; i < n; i++) {
-                        for(j = 0; j < n; j++) {
-                            System.out.print(C[i][j] + " ");
+                    <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"C["</span> <span class="gen">+</span> n <span class="gen">+</span> <span class="st">"]["</span> <span class="gen">+</span> m <span class="gen">+</span> <span class="st">"]</span><span class="gen">\n</span><span class="st">"</span>);
+                    <span class="fce">for</span>(i <span class="gen">=</span> 0; i <span class="gen"><</span> n; i<span class="gen">++</span>) {
+                        <span class="fce">for</span>(j <span class="gen">=</span> 0; j <span class="gen"><</span> m; j<span class="gen">++</span>) {
+                            <span class="re">System.out</span>.<span class="pr">print</span>(<span class="fce">C</span>[i][j] <span class="gen">+</span> <span class="st">" "</span>);
                         }
-                        System.out.print("\n");
+                        <span class="re">System.out</span>.<span class="pr">print</span>(<span class="st">"</span><span class="gen">\n</span><span class="st">"</span>);
                     }
                 }
             }
