@@ -60,7 +60,7 @@ public class tarea22 {
             System.out.print("\n");
         }
 
-        //Suma de Matrices
+        //Multiplicacion de Matrices
         System.out.print("La multiplicacion de las matrices es:\n");
 
         for(i = 0; i < n; i++) {
